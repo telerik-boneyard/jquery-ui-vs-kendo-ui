@@ -15,10 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="stylesheets/skeleton.css">
     <link rel="stylesheet" href="stylesheets/layout.css">    
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2011.3.1129/styles/kendo.common.min.css" r/>
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2011.3.1129/styles/kendo.default.min.css" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cdn.kendostatic.com/2011.3.1129/js/kendo.all.min.js"></script>
   </head>
   <body>
     <div class="container container-header">
@@ -78,15 +74,6 @@
             <div class="eight columns">
               <h3>jQuery UI</h3>
               <p>
-                <a target="_blank" href="http://jqueryui.com/demos/" class="k-button">
-                  Demos &amp; Documentation &#0187;
-                </a>
-              </p>
-              <p>
-                Latest release: 1.8.17 (January 10, 2012)<br />
-                License: <a href="http://jquery.org/license/">GPLv2 and MIT</a>
-              </p>
-              <p>
                 jQuery UI is part of the <a href="http://jquery.org/">jQuery Project</a> and is described as:
               </p>
               <blockquote>
@@ -97,18 +84,18 @@
                   making it easy for developers of any skill level to integrate and extend into their own code.
                 </p>
               </blockquote>
-            </div>
-            <div class="eight columns">
-              <h3>Kendo UI</h3>
               <p>
-                <a target="_blank" href="http://demos.kendoui.com/web/overview/" class="k-button">
+                <a target="_blank" href="http://jqueryui.com/demos/" class="k-button">
                   Demos &amp; Documentation &#0187;
                 </a>
               </p>
               <p>
-                Latest release: 2011.3.1129 (November 30, 2011)<br />
-                License: <a href="http://www.kendoui.com/faq/licensing.aspx">GPLv3 and commercial</a>
+                Latest release: 1.8.17 (January 10, 2012)<br />
+                License: <a href="http://jquery.org/license/">GPLv2 and MIT</a>
               </p>
+            </div>
+            <div class="eight columns">
+              <h3>Kendo UI</h3>
               <p>
                 Kendo UI is developed by Telerik and is comprised of the following three products:
               </p>
@@ -127,6 +114,15 @@
                   HTML5-powered apps and sites for modern mobile devices.
                 </li>
               </ul>
+              <p>
+                <a target="_blank" href="http://demos.kendoui.com/" class="k-button">
+                  Demos &amp; Documentation &#0187;
+                </a>
+              </p>
+              <p>
+                Latest release: 2011.3.1129 (November 30, 2011)<br />
+                License: <a href="http://www.kendoui.com/faq/licensing.aspx">GPLv3 and commercial</a>
+              </p>
             </div>
           </div>
         </section>
@@ -182,7 +178,7 @@
               </tr>
               <tr>
                 <td>Globalization</td>
-                <td>Yes</td>
+                <td>No (see <a href="https://github.com/jquery/globalize">Globalize</a>)</td>
                 <td>Yes</td>
               </tr>
               <tr>
@@ -211,8 +207,8 @@
             applications:
           </p>
           <div class="container">
-            <div class="eight columns">
-              <h3>jQuery UI Widgets</h3>
+            <div class="six columns">
+              <h3>jQuery UI Widgets (8)</h3>
               <ul>
                 <li>Accordion</li>
                 <li>Autocomplete</li>
@@ -224,34 +220,26 @@
                 <li>Tabs</li>
               </ul>
             </div>
-            <div class="eight columns">
-              <h3>Kendo UI Widgets</h3>
-              <div class="container">
-                <div class="four columns">
-                  <ul>
-                    <li>AutoComplete</li>
-                    <li>Calendar</li>
-                    <li>ComboBox</li>
-                    <li>DatePicker</li>
-                    <li>DropDownList</li>
-                    <li>Grid</li>
-                    <li>Menu</li>
-                    <li>NumericTextBox</li>
-                  </ul>
-                </div>
-                <div class="four columns">
-                  <ul>
-                    <li>PanelBar</li>
-                    <li>Slider</li>
-                    <li>Splitter</li>
-                    <li>TabStrip</li>
-                    <li>TimePicker</li>
-                    <li>TreeView</li>
-                    <li>Upload</li>
-                    <li>Window</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="six columns">
+              <h3>Kendo UI Widgets (16)</h3>
+              <ul>
+                <li>AutoComplete</li>
+                <li>Calendar</li>
+                <li>ComboBox</li>
+                <li>DatePicker</li>
+                <li>DropDownList</li>
+                <li>Grid</li>
+                <li>Menu</li>
+                <li>NumericTextBox</li>
+                <li>PanelBar</li>
+                <li>Slider</li>
+                <li>Splitter</li>
+                <li>TabStrip</li>
+                <li>TimePicker</li>
+                <li>TreeView</li>
+                <li>Upload</li>
+                <li>Window</li>
+              </ul>
             </div>
           </div>
           <p>There are a few things worth mentioning here:</p>
@@ -262,6 +250,10 @@
             <li>
               The Autocomplete widget in jQuery UI combines the functionality of the AutoComplete and ComboBox widgets
               in Kendo UI Web.
+            </li>
+            <li>
+              The Datepicker widget in jQuery UI combines the functionality of the Calendar and DatePicker widgets in
+              Kendo UI Web.
             </li>
             <li>
               Menu, Menubar, Popup, Tooltip, and Spinner widgets are scheduled to ship with jQuery UI 1.9.
@@ -279,50 +271,43 @@
         <section id="themes">
           <h2>Themes</h2>
           <p>
-            Widgets in both jQuery UI and Kendo UI support themes and styling via CSS. Both frameworks also provide a
-            number of themes out-of-the-box.
+            Widgets in both jQuery UI and Kendo UI support themes and styling via
+            <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>. Both frameworks also provide a
+            number of themes out-of-the-box along with a means of creating custom themes.
           </p>
           <div class="container">
-            <div class="eight columns">
-              <h3>jQuery UI Themes</h3>
-              <div class="container">
-                <div class="four columns">
-                  <ul>
-                    <li>base</li>
-                    <li>black-tie</li>
-                    <li>blitzer</li>
-                    <li>cupertino</li>
-                    <li>dark-hive</li>
-                    <li>dot-luv</li>
-                    <li>eggplant</li>
-                    <li>excite-bike</li>
-                    <li>flick</li>
-                    <li>hot-sneaks</li>
-                    <li>humanity</li>
-                    <li>le-frog</li>
-                    <li>mint-choc</li>
-                  </ul>
-                </div>
-                <div class="four columns">
-                  <ul>
-                    <li>overcast</li>
-                    <li>pepper-grinder</li>
-                    <li>redmond</li>
-                    <li>smoothness</li>
-                    <li>south-street</li>
-                    <li>start</li>
-                    <li>sunny</li>
-                    <li>swanky-purse</li>
-                    <li>trontastic</li>
-                    <li>ui-darkness</li>
-                    <li>ui-lightness</li>
-                    <li>vader</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="six columns">
+              <h3>jQuery UI Themes (25)</h3>
+              <ul>
+                <li>base</li>
+                <li>black-tie</li>
+                <li>blitzer</li>
+                <li>cupertino</li>
+                <li>dark-hive</li>
+                <li>dot-luv</li>
+                <li>eggplant</li>
+                <li>excite-bike</li>
+                <li>flick</li>
+                <li>hot-sneaks</li>
+                <li>humanity</li>
+                <li>le-frog</li>
+                <li>mint-choc</li>
+                <li>overcast</li>
+                <li>pepper-grinder</li>
+                <li>redmond</li>
+                <li>smoothness</li>
+                <li>south-street</li>
+                <li>start</li>
+                <li>sunny</li>
+                <li>swanky-purse</li>
+                <li>trontastic</li>
+                <li>ui-darkness</li>
+                <li>ui-lightness</li>
+                <li>vader</li>
+              </ul>
             </div>
-            <div class="eight columns">
-              <h3>Kendo UI Themes</h3>
+            <div class="six columns">
+              <h3>Kendo UI Themes (5)</h3>
               <ul>
                 <li>Black</li>
                 <li>Blue Opal</li>
@@ -337,6 +322,12 @@
             through a visual tool that's provided by both frameworks; the jQuery UI
             <a href="http://jqueryui.com/themeroller/">ThemeRoller</a> and the Kendo UI
             <a href="http://demos.kendoui.com/themebuilder/">ThemeBuilder</a>.
+          </p>
+          <p>
+            Both the jQuery UI ThemeRoller and the Kendo UI ThemeBuilder serve the same purpose; to allow the quick
+            creation of custom themes for widgets. However, they differ slightly in their approach. While the jQuery UI
+            ThemeRoller provides an integrated gallery of themes, the Kendo UI ThemeBuilder auto-generates and displays
+            the CSS and <a href="http://lesscss.org/">LESS</a> representations of the custom themes that are generated.
           </p>
         </section>
         <section id="effects">
@@ -356,6 +347,26 @@
         </section>
         <section id="globalization">
           <h2>Globalization</h2>
+          <p>
+            Both jQuery UI and Kendo UI provide excellent support for globalization. Both frameworks have localized
+            widgets for date formats. However, Kendo UI includes support for currency and times as well. Support for
+            culture-aware number and date parsing is available for jQuery UI through the
+            <a href="https://github.com/jquery/globalize">Globalize</a>, a JavaScript library currently in development
+            as part of the Grid project. From the
+            <a href="http://wiki.jqueryui.com/w/page/39118647/Globalize">project wiki for Globalize</a>:
+          </p>
+          <blockquote>
+            <p>
+              In the future, jQuery UI core will expose an API interface that can be met by Globalize. At that point
+              the jQuery UI team will encourage widget authors to utilize this $. utility API to ensure any widget can
+              be globalized in the same way, with or without globalize.js as a dependency.
+            </p>
+          </blockquote>
+          <p>
+            A demo of globalization support for jQuery UI via Globalize can be found
+            <a href="http://jquery.github.com/globalize/examples/browser/">here</a> while a demo of globalization
+            support in Kendo UI can be found <a href="http://demos.kendoui.com/web/globalization/">here</a>.
+          </p>
         </section>
         <section id="validation">
           <h2>Validation</h2>
@@ -363,10 +374,33 @@
         <section id="browser-compatibility">
           <h2>Browser Compatibility</h2>
           <p>
-            The widgets of both jQuery UI and Kendo UI support older browsers, including Internet Explorer 7+, Firefox
-            3+, Chrome, Safari 4+, and Opera 10+. jQuery UI features support for Internet Explorer 6. We decided to
-            drop support for Internet Explorer 6 in the Beta 2 release of Kendo UI based on the feedback we had
-            received from customers.
+            The widgets of both jQuery UI and Kendo UI feature excellent support for older browsers.
+          </p>
+          <div class="container">
+            <div class="six columns">
+              <h3>jQuery UI Browser Compatibility</h3>
+              <ul>
+                <li>Internet Explorer 6+</li>
+                <li>Firefox 3+</li>
+                <li>Safari 3.1+</li>
+                <li>Opera 9.6+</li>
+                <li>Google Chrome</li>
+              </ul>
+            </div>
+            <div class="six columns">
+              <h3>Kendo UI Browser Compatibility</h3>
+              <ul>
+                <li>Internet Explorer 7+</li>
+                <li>Firefox 3+</li>
+                <li>Safari 4+</li>
+                <li>Opera 10+</li>
+                <li>Google Chrome</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            While jQuery UI does feature support for Internet Explorer 6, we decided to drop its support after the
+            Kendo UI Beta 2 release based on the feedback we had received from customers.
           </p>
         </section>
         <section id="mobile-device-compatibility">
