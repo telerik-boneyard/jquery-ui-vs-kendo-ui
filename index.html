@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery UI vs Kendo UI</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>jQuery UI vs Kendo UI</h1>
+        <p>We've spent a great deal of time talking to customers about <a href="http://www.kendoui.com/">Kendo UI</a>, our framework for building modern web applications with HTML5, CSS3, and <a href="http://jquery.com/">jQuery</a>. Since its launch in November 2011, we have fielded many questions on our <a href="http://www.kendoui.com/forums.aspx">forums</a>, Stack Overflow, Twitter and other networks. One of the most frequently asked questions we receive involves comparing Kendo UI with <a href="http://jqueryui.com/">jQuery UI</a>. On this site, I will highlight the similarities and differences between these two frameworks in the hope of answering this question in a more detailed manner than what you may have read, seen, or heard elsewhere.</p>
+        <h2>Disclaimer</h2>
+        <p>I work for Telerik as a Developer Evangelist. My role is to help developers be awesome with Kendo UI and other products from Telerik. That stated, my view of the world may be different than yours. My goal to present a detailed and accurate comparison of these frameworks so that you can make an informed decision if you in midst of an evaluation. By the way, if you see something that I've stuffed up, please let me know; <a href="http://twitter.com/JohnBristowe">ping me on Twitter</a> or <a href="mailto:john.bristowe@telerik.com">via email</a>.</p>
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>Both Kendo UI and jQuery UI are built on top of <a href="http://jquery.com/">jQuery</a>.</p>
+          <div class="row">
+            <div class="span8">
+              <h3>jQuery UI</h3>
+              <p><a target="_blank" href="http://jqueryui.com/demos/" class="btn primary">Demos &amp; Documentation »</a></p>
+              <p>jQuery UI is part of the <a href="http://jquery.org/">jQuery Project</a> and provides abstractions for interactions, animations, visual effects and themeable widgets.</p>
+            </div>
+            <div class="span8">
+              <h3>Kendo UI</h3>
+              <p><a target="_blank" href="http://demos.kendoui.com/web/overview/" class="btn primary">Demos &amp; Documentation »</a></p>
+              <p>Kendo UI is developed by <a href="http://telerik.com/">Telerik</a> and is comprised of three products: <a href="http://www.kendoui.com/web.aspx">Kendo UI Web</a>, <a href="http://www.kendoui.com/dataviz.aspx">Kendo UI DataViz</a>, and <a href="http://www.kendoui.com/mobile.aspx">Kendo UI Mobile</a>.</p>
+              <dl>
+                <dt>Kendo UI Web</dt>
+                <dd>Core Kendo UI framework functionality, including the <a href="http://demos.kendoui.com/web/datasource/index.html">DataSource</a> component, <a href="http://demos.kendoui.com/web/templates/index.html">Templates</a>, and <a href="http://demos.kendoui.com/web/dragdrop/index.html">drag-and-drop</a>, plus UI widgets like <a href="http://demos.kendoui.com/web/grid/index.html">Grid</a>, <a href="http://demos.kendoui.com/web/combobox/index.html">ComboBox</a>, and <a href="http://demos.kendoui.com/web/treeview/index.html">TreeView</a></dd>
+                <dt>Kendo UI DataViz</dt>
+                <dd>Collection of HTML5-powered, mobile-ready, plug-in free data visualization widgets</dd>
+                <dt>Kendo UI Mobile</dt>
+                <dd>Native UI widgets for building HTML5-powered apps and sites for modern mobile devices</dt>
+              </dl>
+            </div>
+          </div>
+        </section>
+        <section id="highlights">
+          <h2>Highlights</h2>
+          <table class="bordered-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>jQuery UI</th>
+                <th>Kendo UI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Latest Release</td>
+                <td>1.8.17 (January 10, 2012)</td>
+                <td>2011.3.1129 (November 30, 2011)</td>
+              </tr>
+              <tr>
+                <td>License</td>
+                <td><a href="http://jquery.org/license/">MIT and GPLv2</a></td>
+                <td><a href="http://www.kendoui.com/faq/licensing.aspx">GPLv3 and Commercial</a></td>
+              </tr>
+              <tr>
+                <td>Widgets (Total)</td>
+                <td>Yes (8)</td>
+                <td>Yes (16)</td>
+              </tr>
+              <tr>
+                <td>Mobile Browser Support</td>
+                <td>No; see <a href="http://jquerymobile.com/">jQuery Mobile</a></td>
+                <td>Yes; Kendo UI Mobile</td>
+              </tr>
+              <tr>
+                <td>Data Visualization</td>
+                <td>No</td>
+                <td>Yes; Kendo UI DataViz</td>
+              </tr>
+              <tr>
+                <td>Effects</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Interactions</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Themes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Templates</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>DataSource</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Globalization</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Validation</td>
+                <td>Available through <a href="http://docs.jquery.com/Plugins/Validation">jQuery Validation Plugin</a></td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Browser Support</td>
+                <td>IE 6+, Firefox 3+, Safari 3.1+, Opera 9.6+, Chrome</td>
+                <td>IE 7+, Firefox 3+, Safari 4+, Opera 10, Chrome</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>This data was last aggregated on January 11, 2012.</p>
+        </section>
+        <section id="widgets">
+          <h2>Widgets</h2>
+          <p>jQuery UI and Kendo UI provide widgets for constructing the front-end interface of your web application. In both frameworks, these widgets support the ability to be themed.</p>
+          <div class="row">
+            <div class="span8">
+              <h3>jQuery UI</h3>
+              <ul>
+                <li><code>Accordion</code></li>
+                <li><code>Autocomplete</code></li>
+                <li><code>Button</code></li>
+                <li><code>Datepicker</code></li>
+                <li><code>Dialog</code></li>
+                <li><code>ProgressBar</code></li>
+                <li><code>Slider</code></li>
+                <li><code>Tabs</code></li>
+              </ul>
+            </div>
+            <div class="span8">
+              <h3>Kendo UI</h3>
+              <div class="row">
+                <div class="span4">
+                  <ul>
+                    <li><code>AutoComplete</code></li>
+                    <li><code>Calendar</code></li>
+                    <li><code>ComboBox</code></li>
+                    <li><code>DatePicker</code></li>
+                    <li><code>DropDownList</code></li>
+                    <li><code>Grid</code></li>
+                    <li><code>Menu</code></li>
+                    <li><code>NumericTextBox</code></li>
+                  </ul>
+                </div>
+                <div class="span4">
+                  <ul>
+                    <li><code>PanelBar</code></li>
+                    <li><code>Slider</code></li>
+                    <li><code>Splitter</code></li>
+                    <li><code>TabStrip</code></li>
+                    <li><code>TimePicker</code></li>
+                    <li><code>TreeView</code></li>
+                    <li><code>Upload</code></li>
+                    <li><code>Window</code></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><span class="label important">Important</span> While there are fewer widgets in the list for jQuery UI, it's important to highlight that some widgets like <code>Autocomplete</code> combine the functionality of multiple widgets in Kendo UI Web.</p>
+          <p><span class="label notice">Notice</span> <code>Menu</code>, <code>Menubar</code>, <code>Popup</code>, <code>Tooltip</code>, and <code>Spinner</code> widgets are planned for jQuery UI 1.9. These widgets will fill in some of the gaps in the table (above). At the time of this writing, the jQuery UI team is also working on a Grid. I would recommend reviewing the <a href="http://wiki.jqueryui.com/w/page/34246941/Grid">jQuery UI Grid Project wiki page</a> for more information on its status. There are plugins for other widgets available from the jQuery community.</p>
+        </section>
+        <section id="browser-compatibility">
+          <h2>Browser Compatibility</h2>
+          <p>The widgets of both jQuery UI and Kendo UI support older browsers, including <strong>Internet Explorer 7+</strong>, <strong>Firefox 3+</strong>, <strong>Chrome</strong>, <strong>Safari 4+</strong>, and <strong>Opera 10+</strong>. jQuery UI goes a little further by supporting <strong>Internet Explorer 6</strong>. However, <a href="http://www.kendoui.com/blogs/archive/11-08-30/ie7_is_the_new_ie6.aspx">we dropped support for Internet Explorer 6 in Kendo UI</a> as result of feedback received from our customers.</p>
+        </section>
+        <section id="html5">
+          <h2>HTML5</h2>
+        </section>
+        <section id="support">
+          <h2>Product Support</h2>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
