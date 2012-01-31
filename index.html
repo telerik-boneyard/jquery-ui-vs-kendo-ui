@@ -37,14 +37,28 @@
  <body>
   <h1>jQuery UI vs Kendo UI</h1>
   <p>We've spent a lot of time talking to customers about <a href="http://www.kendoui.com/">Kendo UI</a>, our framework for building rich web applications with modern web standards like HTML5, CSS3, and <a href="http://jquery.com/">jQuery</a>. Since its launch in November 2011, we've answered many questions on the <a href="http://www.kendoui.com/forums.aspx">Kendo UI Forums</a>, <a href="http://stackoverflow.com/">Stack Overflow</a>, Twitter and elsewhere. One of the most frequently asked questions involves comparing Kendo UI with <a href="http://jqueryui.com/">jQuery UI</a>. On this site, I've documented the similarities and differences between these two frameworks in the hope of providing an answer to this question in a detailed manner than what you may have read, seen, or heard elsewhere.</p>
-  <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4f25e83271f3ad7b"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f25e83271f3ad7b"></script>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="JohnBristowe">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <div class="g-plusone" data-size="medium" data-annotation="bubble"></div>
+  <script type="text/javascript">
+   (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+  </script>
   <section id="disclaimer">
    <h2>Disclaimer</h2>
    <p>I work for <a href="http://www.telerik.com/">Telerik</a> as a Developer Evangelist. My role is to help developers be awesome with Kendo UI and our other products. That stated, our views of the world may differ on the matter of jQuery UI vs Kendo UI. It is my goal to present a detailed and accurate comparison of these frameworks so that you can make an informed decision if you in midst of an evaluation. By the way, if you see something that I've stuffed up, please let me know!</p>
    <p>
     <a href="http://bristowe.com/">John Bristowe</a> (<a href="http://twitter.com/JohnBristowe">@JohnBristowe</a>)<br />
     January 2012
+   </p>
+  </section>
+  <section id="updates">
+   <h2>Updates</h2>
+   <p>
+    <strong>January 30, 2012:</strong> Replaced social buttons with Twitter and G+; updated <a href="#datasource-item">DataSource section</a> to include (upcoming) Dataview component for jQuery UI; updated <a href="#mobile-device-compatibility-item">Mobile Device Compatibility section</a> to include information about touch interaction updates pending for jQuery UI.
    </p>
   </section>
   <ul id="panelbar">
@@ -137,7 +151,7 @@
         </tr>
         <tr>
          <td>DataSource</td>
-         <td>No</td>
+         <td>No (see <a href="http://wiki.jqueryui.com/w/page/47179141/Dataview">Dataview</a>)</td>
          <td>Yes</td>
         </tr>
         <tr>
@@ -273,6 +287,7 @@
    DataSource
    <div style="padding: 0px 15px 0px 15px;">
     <p>A significant difference between jQuery UI and Kendo UI is support for a DataSource component.</p>
+    <p>Currently, a DataSource-like component called Dataview is under development for jQuery UI. You can read more about its progress on <a href="http://wiki.jqueryui.com/w/page/47179141/Dataview">the wiki page for Dataview</a>.</p>
     <p>The DataSource component is a powerful abstraction of data in Kendo UI and is fundamental to the way in which databinding is conducted with widgets. While the concept of databinding of local and remote data source is supported in jQuery UI, no such abstraction exists.</p>
     <p>From the demo page for the DataSource component:</p>
     <blockquote>
@@ -335,7 +350,7 @@
  <li id="mobile-device-compatibility-item">
   Mobile Device Compatibility
   <div style="padding: 0px 15px 0px 15px;">
-   <p>jQuery UI widgets do not provide support for touch and mobile devices. As an alternative, <a href="http://jquerymobile.com/">jQuery Mobile</a> provides an excellent framework of widgets for building mobile web applications. From the project's homepage:</p>
+   <p>jQuery UI widgets do not provide support for touch and mobile devices. However, the jQuery team is currently working on touch support for all interactions - more information is available <a href="http://wiki.jqueryui.com/w/page/50166448/Interaction">here</a>. As an alternative, <a href="http://jquerymobile.com/">jQuery Mobile</a> provides an excellent framework of widgets for building mobile web applications. From the project's homepage:</p>
    <blockquote>
     <p>A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation. Its lightweight code is built with progressive enhancement, and has a flexible, easily themeable design.</p>
    </blockquote>
