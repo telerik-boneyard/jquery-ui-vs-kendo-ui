@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>jQuery Mobile vs. Kendo UI Mobile - Transition Comparison</title>
+
+	<style>
+		* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+		body {
+			font-family: Verdana;
+			font-size: 100%;
+			min-width: 650px;
+		}
+		iframe {
+			display: inline-block;
+			width: 320px;
+			height: 480px;
+			margin: 0;
+			border: 1px solid black;
+		}
+		#kendoFrame {
+			margin-left: -6px;
+		}
+
+		button {
+			display: block;
+			margin: 0.5em 0;
+			background: #169016;
+			color: white;
+			width: 640px;
+			font-size: 1.5em;
+			border-radius: 5px;
+		}
+		button[disabled] {
+			opacity: 0.4;
+			cursor: none;
+		}
+
+		#projectContainer {
+			overflow: hidden;
+			bottom: 0;
+		}
+		#projectContainer > div {
+			float: left;
+			width: 320px;
+			border: 1px solid black;
+			padding: 1em;
+		}
+		#jQueryContainer {
+			background: #0F212E;
+		}
+		#jQueryContainer label { color: white; }
+		#kendoContainer {
+			background: #EFEFEF;
+		}
+		#kendoContainer img { height: 58px; }
+	</style>
+</head>
+<body>
+
+<p>Comparison of the transitions provided by jQuery Mobile and Kendo UI Mobile. Pick transitions and press the big button.</p>
+
+<button disabled>Transition!</button>
+
+<div id="projectContainer">
+	<div id="jQueryContainer">
+		<div>
+			<img src="http://jquerymobile.com/wp-content/uploads/2012/09/jquery-mobile-logo-03.png" alt="jQuery Mobile logo">
+		</div>
+		<label for="jQueryTransition">Transition:</label>
+		<select id="jQueryTransition">
+			<option value="slide" selected>Slide</option>
+			<option value="slideup">Slide Up</option>
+			<option value="slidedown">Slide Down</option>
+			<option value="pop">Pop</option>
+			<option value="fade">Fade</option>
+			<option value="flip">Flip</option>
+		</select>
+	</div>
+	<div id="kendoContainer">
+		<div>
+			<img src="http://www.kendoui.com/Image/kendo-logo.png" alt="Kendo UI logo">
+		</div>
+		<label for="kendoTransition">Transition:</label>
+		<select id="kendoTransition">
+			<option value="fade">Fade</option>
+			<option value="overlay">Overlay</option>
+			<option value="slide" selected>Slide</option>
+			<option value="zoom">Zoom</option>
+		</select>
+	</div>
+</div>
+
+<iframe src="jquery-transitions.html" frameborder="0"></iframe>
+<iframe id="kendoFrame" src="kendo-transitions.html" frameborder="0"></iframe>
+
+<div hidden>
+	<div data-library="jQuery">
+		<div data-role="view" data-title="Destinations">
+			<div data-role="header">
+				<h1>Listview</h1>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" data-divider-theme="b" data-inset="true">
+					<li data-role="list-divider">Africa</li>
+					<li><a>Nairobi</a></li>
+					<li data-role="list-divider">America</li>
+					<li><a>Boston</a></li>
+					<li><a>Ottawa</a></li>
+					<li><a>San Francisco</a></li>
+					<li data-role="list-divider">Asia</li>
+					<li><a>Bombay</a></li>
+					<li data-role="list-divider">Australia</li>
+					<li><a>Melbourne</a></li>
+					<li><a>Sydney</a></li>
+					<li data-role="list-divider">Europe</li>
+					<li><a>Cannes</a></li>
+					<li><a>Liverpool</a></li>
+					<li><a>London</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-library="kendo">
+		<header data-role="header">
+			<div data-role="navbar">
+				ListView
+			</div>
+		</header>
+		<ul data-role="listview" data-style="inset" data-type="group">
+			<li>
+				Africa
+				<ul>
+					<li><a>Nairobi</a></li>
+				</ul>
+			</li>
+			<li>
+				America
+				<ul>
+					<li><a>Boston</a></li>
+					<li><a>Ottawa</a></li>
+					<li><a>San Francisco</a></li>
+				</ul>
+			</li>
+			<li>
+				Asia
+				<ul>
+					<li><a>Bombay</a></li>
+				</ul>
+			</li>
+			<li>
+				Australia
+				<ul>
+					<li><a>Melbourne</a></li>
+					<li><a>Sydney</a></li>
+				</ul>
+			</li>
+			<li>
+				Europe
+				<ul>
+					<li><a>Cannes</a></li>
+					<li><a>Liverpool</a></li>
+					<li><a>London</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div data-library="jQuery" data-widget="Button Group">
+	   <div data-role="content">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<label>One<input type="radio" name="radios"></label>
+				<label>Two<input type="radio" name="radios"></label>
+				<label>Three<input type="radio" name="radios"></label>
+			</fieldset>
+		</div>
+	</div>
+	<div data-library="kendo" data-widget="Button Group">
+		<ul data-role="buttongroup" style="margin-top: 1.5em;">
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+		</ul>
+	</div>
+	<div data-library="jQuery" data-widget="Checkbox / Radio">
+		<div data-role="content">
+			<fieldset data-role="controlgroup">
+				<label>One<input type="checkbox"></label>
+				<label>Two<input type="checkbox"></label>
+				<label>Three<input type="checkbox"></label>
+			</fieldset>
+			<fieldset data-role="controlgroup">
+				<label>One<input type="radio" name="radios"></label>
+				<label>Two<input type="radio" name="radios"></label>
+				<label>Three<input type="radio" name="radios"></label>
+			</fieldset>
+		</div>
+	</div>
+	<div data-library="kendo" data-widget="Checkbox / Radio">
+		<ul data-role="listview" data-style="inset">
+			<li>
+				<label>One<input type="checkbox"></label>
+			</li>
+			<li>
+				<label>Two<input type="checkbox"></label>
+			</li>
+			<li>
+				<label>Three<input type="checkbox"></label>
+			</li>
+		</ul>
+		<ul data-role="listview" data-style="inset">
+			<li>
+				<label>One<input type="radio" name="radios"></label>
+			</li>
+			<li>
+				<label>Two<input type="radio" name="radios"></label>
+			</li>
+			<li>
+				<label>Three<input type="radio" name="radios"></label>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script>
+	(function() {
+		var kendoApplication,
+			jQueryFrame = $( "iframe" ).get( 0 ),
+			kendoFrame = $( "iframe" ).get( 1 ),
+			jQueryWindow = jQueryFrame.contentWindow,
+			kendoWindow = kendoFrame.contentWindow,
+			jQueryBody = $( jQueryWindow.document.body ),
+			kendoBody = $( kendoWindow.document.body ),
+			pageCount = 0,
+			readyCount = 0,
+			widgetCount = $( "[data-library=jQuery]" ).length;
+
+		function readyCheck() {
+			if ( readyCount == 1 ) {
+				$( "button" ).prop( "disabled", false );
+			}
+			readyCount++;
+		};
+		$( jQueryFrame ).ready( readyCheck );
+		$( kendoFrame ).ready( readyCheck );
+
+		$( "button" ).on( "click", function( event ) {
+			event.preventDefault();
+			
+			var index = ( pageCount + 1 ) % widgetCount,
+				jQueryTransition = $( "#jQueryTransition" ).val(),
+				kendoTransition = $( "#kendoTransition" ).val(),
+				newjQueryPage = $( "<div data-role='page' id='new" + pageCount + "'></div>" ),
+				newKendoView = $( "<div data-role='view' id='new" + pageCount + "'></div>" );
+				jQueryContent = $( "[data-library='jQuery']" ).eq( index ),
+				kendoContent = $( "[data-library='kendo']" ).eq( index );
+			
+			jQueryBody.append( newjQueryPage );
+			kendoBody.append( newKendoView );
+			
+			newjQueryPage.html( jQueryContent.html() );
+			newKendoView.html( kendoContent.html() );
+			
+			newjQueryPage.trigger( "create" );
+			jQueryWindow.$.mobile.changePage( "#new" + pageCount, { transition: jQueryTransition } );
+			kendoWindow.kendoApplication.navigate( "#new" + pageCount, kendoTransition );
+			pageCount++;
+		});
+	}());
+</script>
+
+</body>
+</html>

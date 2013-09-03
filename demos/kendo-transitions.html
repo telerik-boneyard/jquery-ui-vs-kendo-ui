@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Kendo UI Mobile Sample Markup</title>
+
+	<link rel="stylesheet" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.default.min.css">
+	<link rel="stylesheet" type="text/css" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.mobile.all.min.css">
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type='text/javascript' src="http://cdn.kendostatic.com/2013.2.716/js/kendo.all.min.js"></script>
+</head>
+<body>
+
+<div data-role="view" data-title="Destinations">
+	<header data-role="header">
+		<div data-role="navbar">
+			ListView
+		</div>
+	</header>
+	<ul data-role="listview" data-style="inset" data-type="group">
+		<li>
+			Africa
+			<ul>
+				<li><a>Nairobi</a></li>
+			</ul>
+		</li>
+		<li>
+			America
+			<ul>
+				<li><a>Boston</a></li>
+				<li><a>Ottawa</a></li>
+				<li><a>San Francisco</a></li>
+			</ul>
+		</li>
+		<li>
+			Asia
+			<ul>
+				<li><a>Bombay</a></li>
+			</ul>
+		</li>
+		<li>
+			Australia
+			<ul>
+				<li><a>Melbourne</a></li>
+				<li><a>Sydney</a></li>
+			</ul>
+		</li>
+		<li>
+			Europe
+			<ul>
+				<li><a>Cannes</a></li>
+				<li><a>Liverpool</a></li>
+				<li><a>London</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<script>
+	window.kendoApplication = new kendo.mobile.Application( document.body );
+</script>
+
+</body>
+</html>
