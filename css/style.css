@@ -53,6 +53,16 @@ header > div {
  background: #16AA16;
  color: white;
 }
+.side-by-side > div {
+ display: block;
+ float: left;
+ width: 49%;
+}
+.side-by-side img { max-width: 100%; }
+.side-by-side p {
+ color: #F0713A;
+ font-style: italic;
+}
 #nav_container {
  position: fixed;
  top: 0;
