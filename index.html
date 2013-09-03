@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.common.min.css">
   <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.default.min.css">
   <style>
+   * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
    html {
     font-size: 62.5%;
    }
@@ -27,16 +28,6 @@
     background-color: #ffffff;
     margin: 0;
     max-width: 1200px;
-   }
-   #nav_container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-   }
-   #content {
-    float: left;
-    margin-left: 300px;
    }
    h1 {
     font-size: 2em;
@@ -53,9 +44,37 @@
    section {
     border-top: 1px solid #333;
    }
+
+   header {
+    text-align: center;
+    margin-top: 0.5em;
+   }
+   header h2 {
+    font-size: 3em;
+    margin: 0;
+   }
+   header > div {
+    display: inline-block;
+    padding: 1em;
+    border-radius: 5px;
+    vertical-align: middle;
+   }
+   .jquery-ui-logo { background: #B24926; }
+   .kendo-logo { background: #EFEFEF; }
+   #nav_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+   }
+   #content {
+    float: left;
+    margin-left: 300px;
+   }
    .social-buttons {
      text-align: center;
    }
+
    @media (max-width: 600px) {
     #nav_container {
      position: static;
@@ -103,6 +122,17 @@
     </ul>
   </div>
   <div id="content">
+  <header>
+   <div class="jquery-ui-logo">
+    <img src="img/jquery-ui-logo.png">
+   </div>
+   <div>
+    <h2>VS</h2>
+   </div>
+   <div class="kendo-logo">
+    <img src="img/kendo-logo.png">
+   </div>
+  </header>
   <p>We've spent a lot of time talking to customers about <a href="http://www.kendoui.com/">Kendo UI</a>, our framework for building rich web applications with modern web standards like HTML5, CSS3, and <a href="http://jquery.com/">jQuery</a>. Since its launch in November 2011, we've answered many questions on the <a href="http://www.kendoui.com/forums.aspx">Kendo UI Forums</a>, <a href="http://stackoverflow.com/">Stack Overflow</a>, Twitter and elsewhere. One of the most frequently asked questions involves comparing Kendo UI with <a href="http://jqueryui.com/">jQuery UI</a>. On this site, I've documented the similarities and differences between these two frameworks in the hope of providing an answer to this question in a detailed manner than what you may have read, seen, or heard elsewhere.</p>
   <section id="disclaimer">
    <h2>Disclaimer</h2>
