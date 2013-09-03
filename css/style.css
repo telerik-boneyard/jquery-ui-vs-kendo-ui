@@ -1,0 +1,103 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+html {
+ font-size: 62.5%;
+}
+body {
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size: 17px;
+ line-height: 1.428571429;
+ color: #333333;
+ background-color: #ffffff;
+ margin: 0;
+ max-width: 1200px;
+}
+h1 {
+ font-size: 2em;
+ text-align: center;
+}
+li {
+ margin: 0.5em 0;
+}
+hr {
+ border-width: 0 0 1px 0;
+ border-style: dashed;
+ margin: 0 0.1em;
+}
+section {
+ border-top: 1px solid #333;
+}
+
+header {
+ text-align: center;
+ margin-top: 0.5em;
+}
+header h2 {
+ font-size: 3em;
+ margin: 0;
+}
+header > div {
+ display: inline-block;
+ padding: 1em;
+ border-radius: 5px;
+ vertical-align: middle;
+}
+.jquery-ui-logo { background: #B24926; }
+.kendo-logo { background: #EFEFEF; }
+#nav_container {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 300px;
+ height: 100%;
+ overflow: auto;
+ padding: 1.5em;
+}
+#nav_container h3 {
+ font-size: 1em;
+ text-align: left;
+ margin: 0.6em 0 0.3em 0;
+}
+nav ul {
+ margin: 0.5em 0 0 0;
+ padding: 0;
+ list-style: none;
+}
+nav li {
+ margin: 0;
+}
+#nav_container nav a {
+ margin: 0;
+ width: 100%;
+ text-align: left;
+ font-size: 0.8em;
+ border-radius: 0;
+}
+#nav_container nav a:target {
+ background: #f0713a;
+}
+#content {
+ float: left;
+ margin-left: 320px;
+}
+.social-buttons {
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+ .divider { display: block; padding: 0; }
+}
+@media (max-width: 700px) {
+ #nav_container h1 { font-size: 3em; }
+ #nav_container {
+  position: static;
+  width: 100%;
+ }
+ #nav_container nav a {
+  font-size: 1em;
+ }
+ #content {
+  float: none;
+  width: 90%;
+  margin: 0 auto;
+ }
+}

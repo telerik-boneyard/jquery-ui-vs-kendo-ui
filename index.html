@@ -15,109 +15,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.common.min.css">
   <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.default.min.css">
-  <style>
-   * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-   html {
-    font-size: 62.5%;
-   }
-   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.428571429;
-    color: #333333;
-    background-color: #ffffff;
-    margin: 0;
-    max-width: 1200px;
-   }
-   h1 {
-    font-size: 2em;
-    text-align: center;
-   }
-   li {
-    margin: 0.5em 0;
-   }
-   hr {
-    border-width: 0 0 1px 0;
-    border-style: dashed;
-    margin: 0 0.1em;
-   }
-   section {
-    border-top: 1px solid #333;
-   }
-
-   header {
-    text-align: center;
-    margin-top: 0.5em;
-   }
-   header h2 {
-    font-size: 3em;
-    margin: 0;
-   }
-   header > div {
-    display: inline-block;
-    padding: 1em;
-    border-radius: 5px;
-    vertical-align: middle;
-   }
-   .jquery-ui-logo { background: #B24926; }
-   .kendo-logo { background: #EFEFEF; }
-   #nav_container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 100%;
-    overflow: auto;
-   }
-   #nav_container h1 {
-    font-size: 1.2em;
-   }
-   nav ul {
-    margin: 0.5em 0 0 0;
-    padding: 0 2em;
-    list-style: none;
-   }
-   nav li {
-    margin: 0;
-   }
-   #nav_container nav a {
-    margin: 0;
-    width: 100%;
-    text-align: left;
-    font-size: 0.8em;
-    border-radius: 0;
-   }
-   #nav_container nav a:target {
-    background: #f0713a;
-   }
-   #content {
-    float: left;
-    margin-left: 300px;
-   }
-   .social-buttons {
-     text-align: center;
-   }
-
-   @media (max-width: 1000px) {
-    .divider { display: block; padding: 0; }
-   }
-   @media (max-width: 600px) {
-    #nav_container h1 { font-size: 3em; }
-    #nav_container {
-     position: static;
-     width: 100%;
-    }
-    #content {
-     float: none;
-     width: 90%;
-     margin: 0 auto;
-    }
-   }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
  </head>
  <body>
   <div id="nav_container">
-   <h1>jQuery UI vs Kendo UI</h1>
    <div class="social-buttons">
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="JohnBristowe">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -130,6 +31,13 @@
      })();
     </script>
    </div>
+   <nav>
+    <ul>
+     <li><a class="k-button" href="#disclaimer">Disclaimer</a></li>
+     <li><a class="k-button" href="#updates">Updates</a></li>
+    </ul>
+   </nav>
+   <h3>jQuery UI vs Kendo UI</h3>
    <nav>
     <ul>
      <li><a class="k-button" href="#introduction">Introduction</a></li>
@@ -147,6 +55,11 @@
      <li><a class="k-button" href="#mobile-device-compatibility">Mobile Device Compatibility</a></li>
      <li><a class="k-button" href="#web-standards-support">Web Standards Support</a></li>
      <li><a class="k-button" href="#product-support">Product Support</a></li>
+    </ul>
+    <h3>jQuery Mobile vs Kendo UI Mobile</h3>
+    <ul>
+     <li><a class="k-button" href="#introduction">Introduction</a></li>
+     <li><a class="k-button" href="#">etc...</a></li>
     </ul>
   </div>
   <div id="content">
