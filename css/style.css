@@ -47,7 +47,7 @@ header > div {
  position: fixed;
  top: 0;
  left: 0;
- width: 300px;
+ width: 275px;
  height: 100%;
  overflow: auto;
  padding: 0.5em 1.5em 1.5em 1.5em;
@@ -77,7 +77,7 @@ nav li {
 }
 #content {
  float: left;
- margin-left: 320px;
+ margin-left: 295px;
 }
 .social-buttons {
  margin-top: 1em;

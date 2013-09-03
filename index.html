@@ -24,9 +24,7 @@
      <li><a class="k-button" href="#disclaimer">Disclaimer</a></li>
      <li><a class="k-button" href="#updates">Updates</a></li>
     </ul>
-   </nav>
-   <h3>jQuery UI vs Kendo UI</h3>
-   <nav>
+    <h3>jQuery UI vs Kendo UI</h3>
     <ul>
      <li><a class="k-button" href="#introduction">Introduction</a></li>
      <li><a class="k-button" href="#why-kendo-ui">Why Kendo UI?</a></li>
@@ -200,7 +198,7 @@
       </tr>
       <tr>
        <td>Globalization</td>
-       <td>Yes</td>
+       <td>Yes (via <a href="https://github.com/jquery/globalize">Globalize</a>)</td>
        <td>Yes</td>
       </tr>
       <tr>
@@ -301,11 +299,11 @@
     </li>
    </ul>
    <p>The interactions provided by both jQuery UI and Kendo UI are highly customizable.</p>
-   <p>It should be noted that interactions for jQuery UI are being rewritten for the 2.0 release.</p>
+   <p>jQuery UI's interactions do not support touch events and are <a href="http://wiki.jqueryui.com/w/page/50166448/Interaction">in the process of being rewritten</a>.</p>
   </section>
   <section id="templates">
    <h2>Templates</h2>
-   <p>Currently, jQuery UI is in the process of developing support for templates. In the meantime, the <a href="http://wiki.jqueryui.com/w/page/37898666/Template">Template</a> plug-in provides good support for templates.</p>
+   <p>jQuery UI does not support templating.</p>
    <p>Kendo UI supports a simple yet high performance templating engine.</p>
    <p>In August 2011, Todd Anglin (<a href="http://twitter.com/toddanglin">@ToddAnglin</a>) did a great job providing an overview the templating engine of Kendo UI in his blog post, <a href="http://kendoui.com/blogs/archive/11-08-26/kendo_ui_templates_faster_than_a_speeding_resig.aspx">Kendo UI Templates: Faster than a Speeding Resig</a>:</p>
    <blockquote>
@@ -328,19 +326,20 @@
   </section>
   <section id="data-visualization">
    <h2>Data Visualization</h2>
-   <p>jQuery UI does not provide a framework for data visualizations. However, many plugins exist.</p>
+   <p>jQuery UI does not provide a framework for data visualizations.</p>
    <p>Kendo UI provides a library of data visualizations through Kendo UI DataViz, an API that provides Pie, Line, Bar, Column, and Scatter charts to your applications and websites.</p>
    <blockquote>Kendo UI DataViz automatically uses <a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> or <a href="http://en.wikipedia.org/wiki/Vml">VML</a> to render rich data visualizations, depending on the capabilities of the browser. This makes it possible to render Kendo UI DataViz charts in [many] environments, from older browsers, like IE7, to mobile browsers on platforms like iOS and Android (Opera and the Android browser v3 and up).</blockquote>
    <p>Kendo UI DataViz is underpinned by the effects and interactions framework of Kendo UI to provide visual animations when rendering to the browser.</p>
   </section>
   <section id="globalization">
    <h2>Globalization</h2>
-   <p>Both jQuery UI and Kendo UI provide excellent support for globalization. Both frameworks have localized widgets for date formats. However, Kendo UI includes support for currency and times as well. Support for culture-aware number and date parsing is available for jQuery UI through the <a href="https://github.com/jquery/globalize">Globalize</a>, a JavaScript library currently in development as part of the Grid project. From the <a href="http://wiki.jqueryui.com/w/page/39118647/Globalize">project wiki for Globalize</a>:
+   <p>Both jQuery UI and Kendo UI provide excellent support for globalization. Both frameworks have localized widgets for dates, currency, and time.
    </p>
-   <blockquote>
-    <p>In the future, jQuery UI core will expose an API interface that can be met by Globalize. At that point the jQuery UI team will encourage widget authors to utilize this $. utility API to ensure any widget can be globalized in the same way, with or without globalize.js as a dependency.</p>
-   </blockquote>
-   <p><a target="_blank" href="http://jquery.github.com/globalize/examples/browser/" class="k-button">jQuery UI via Globalize Demo</a></p>
+   <p>
+    <a target="_blank" href="http://jqueryui.com/datepicker/#localization" class="k-button">jQuery UI Date Demo</a>
+    <a target="_blank" href="http://jqueryui.com/spinner/#currency" class="k-button">jQuery UI Currency Demo</a>
+    <a target="_blank" href="http://jqueryui.com/spinner/#time" class="k-button">jQuery UI Time Demo</a>
+   </p>
    <p><a target="_blank" href="http://demos.kendoui.com/web/globalization/index.html" class="k-button">Kendo UI Globalization Demo</a></p>
   </section>
   <section id="validation">
