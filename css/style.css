@@ -43,6 +43,16 @@ header > div {
 }
 .jquery-ui-logo { background: #B24926; }
 .kendo-logo { background: #EFEFEF; }
+.callout {
+ background: #169016;
+ color: white;
+ font-size: 1.2em;
+ padding: 0.3em 1em;
+}
+.callout:hover {
+ background: #16AA16;
+ color: white;
+}
 #nav_container {
  position: fixed;
  top: 0;
