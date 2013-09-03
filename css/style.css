@@ -41,8 +41,11 @@ header > div {
  border-radius: 5px;
  vertical-align: middle;
 }
+
 .jquery-ui-logo { background: #B24926; }
+.jquery-mobile-logo { background: #0F212E; }
 .kendo-logo { background: #EFEFEF; }
+
 .callout {
  background: #169016;
  color: white;
