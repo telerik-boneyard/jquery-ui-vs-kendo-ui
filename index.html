@@ -67,6 +67,27 @@
     left: 0;
     width: 300px;
    }
+   #nav_container h1 {
+    font-size: 1.2em;
+   }
+   nav ul {
+    margin: 0.5em 0 0 0;
+    padding: 0 2em;
+    list-style: none;
+   }
+   nav li {
+    margin: 0;
+   }
+   #nav_container nav a {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    font-size: 0.8em;
+    border-radius: 0;
+   }
+   #nav_container nav a:target {
+    background: #f0713a;
+   }
    #content {
     float: left;
     margin-left: 300px;
@@ -75,7 +96,11 @@
      text-align: center;
    }
 
+   @media (max-width: 1000px) {
+    .divider { display: block; padding: 0; }
+   }
    @media (max-width: 600px) {
+    #nav_container h1 { font-size: 3em; }
     #nav_container {
      position: static;
      width: 100%;
@@ -105,32 +130,32 @@
    </div>
    <nav>
     <ul>
-     <li><a href="#introduction">Introduction</a></li>
-     <li><a href="#why-kendo-ui">Why Kendo UI?</a></li>
-     <li><a href="#quick-comparison">Quick Comparison</a></li>
-     <li><a href="#widgets">Widgets</a></li>
-     <li><a href="#interactions">Interactions</a></li>
-     <li><a href="#templates">Templates</a></li>
-     <li><a href="#datasource">DataSource</a></li>
-     <li><a href="#data-visualization">Data Visualization</a></li>
-     <li><a href="#globalization">Globalization</a></li>
-     <li><a href="#validation">Validation</a></li>
-     <li><a href="#browser-compatibility">Browser Compatibility</a></li>
-     <li><a href="#mobile-device-compatibility">Mobile Device Compatibility</a></li>
-     <li><a href="#web-standards-support">Web Standards Support</a></li>
-     <li><a href="#product-support">Product Support</a></li>
+     <li><a class="k-button" href="#introduction">Introduction</a></li>
+     <li><a class="k-button" href="#why-kendo-ui">Why Kendo UI?</a></li>
+     <li><a class="k-button" href="#quick-comparison">Quick Comparison</a></li>
+     <li><a class="k-button" href="#widgets">Widgets</a></li>
+     <li><a class="k-button" href="#interactions">Interactions</a></li>
+     <li><a class="k-button" href="#templates">Templates</a></li>
+     <li><a class="k-button" href="#datasource">DataSource</a></li>
+     <li><a class="k-button" href="#data-visualization">Data Visualization</a></li>
+     <li><a class="k-button" href="#globalization">Globalization</a></li>
+     <li><a class="k-button" href="#validation">Validation</a></li>
+     <li><a class="k-button" href="#browser-compatibility">Browser Compatibility</a></li>
+     <li><a class="k-button" href="#mobile-device-compatibility">Mobile Device Compatibility</a></li>
+     <li><a class="k-button" href="#web-standards-support">Web Standards Support</a></li>
+     <li><a class="k-button" href="#product-support">Product Support</a></li>
     </ul>
   </div>
   <div id="content">
   <header>
    <div class="jquery-ui-logo">
-    <img src="img/jquery-ui-logo.png">
+    <img src="img/jquery-ui-logo.png" alt="jQuery UI">
    </div>
-   <div>
+   <div class="divider">
     <h2>VS</h2>
    </div>
    <div class="kendo-logo">
-    <img src="img/kendo-logo.png">
+    <img src="img/kendo-logo.png" alt="Kendo UI">
    </div>
   </header>
   <p>We've spent a lot of time talking to customers about <a href="http://www.kendoui.com/">Kendo UI</a>, our framework for building rich web applications with modern web standards like HTML5, CSS3, and <a href="http://jquery.com/">jQuery</a>. Since its launch in November 2011, we've answered many questions on the <a href="http://www.kendoui.com/forums.aspx">Kendo UI Forums</a>, <a href="http://stackoverflow.com/">Stack Overflow</a>, Twitter and elsewhere. One of the most frequently asked questions involves comparing Kendo UI with <a href="http://jqueryui.com/">jQuery UI</a>. On this site, I've documented the similarities and differences between these two frameworks in the hope of providing an answer to this question in a detailed manner than what you may have read, seen, or heard elsewhere.</p>
@@ -142,7 +167,7 @@
     January 2012
    </p>
    <hr>
-   <p>I also work for Telerik as a Developer Advocate, however I'm also a member of the <a href="http://jqueryui.com/about/">jQuery UI team</a>. It is my hope that my double bias will keep any updates I make to this site accurate. My goal is to provide a fair comparison of these two frameworks.</p>
+   <p>I work for Telerik as a Developer Advocate as well, but I'm also a member of the <a href="http://jqueryui.com/about/">jQuery UI team</a>. It is my hope that my double bias will keep any updates I make to this site accurate. My goal is to provide a fair comparison of these two frameworks.</p>
    <p>
     <a href="http://tjvantoll.com">TJ VanToll</a> (<a href="http://twitter.com/tjvantoll">@tjvantoll</a>)<br>
     September 2013
@@ -164,16 +189,20 @@
    <h2>Introduction</h2>
     <p>Kendo UI and jQuery UI are JavaScript frameworks that provide many useful and robust building blocks of a modern web application. Both are built on top of <a href="http://jquery.com/">jQuery</a>, the most popular JavaScript library in use today.</p>
 
+    <hr>
+
     <h3>jQuery UI</h3>
     <p>jQuery UI is part of the <a href="http://jquery.org/">jQuery Project</a> and is described as:</p>
-    <blockquote>[...] an open source library of interface components - interactions, full-featured widgets, and animation effects - based on the stellar jQuery javascript library. Each component is built according to jQuery's event-driven architecture (find something, manipulate it) and is themeable, making it easy for developers of any skill level to integrate and extend into their own code.</blockquote>
+    <blockquote>jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.</blockquote>
     <p>jQuery UI is a popular JavaScript framework in the web developer community.</p>
     <p><a target="_blank" href="http://jqueryui.com/demos/" class="k-button">Demos &amp; Documentation &#0187;</a></p>
     <p>
-     Latest release: 1.8.18 (February 23, 2012) and 1.9, milestone 7 (March 28, 2012)<br />
-     License: <a href="http://jquery.org/license/">GPLv2 or MIT</a>
+     Latest release: 1.10.3 (May 3, 2013)<br>
+     License: <a href="http://jquery.org/license/">MIT</a>
     </p>
-   
+
+    <hr>
+
     <h3>Kendo UI</h3>
     <p>Kendo UI is a pure JavaScript framework with CSS defined for styling and behaviors. It is developed by Telerik and is comprised of the following three products:</p>
     <dl>
@@ -186,7 +215,7 @@
     </dl>
     <p><a target="_blank" href="http://demos.kendoui.com/" class="k-button">Demos &amp; Documentation &#0187;</a></p>
     <p>
-     Latest release: 2012.1.322 (March 22, 2012)<br />
+     Latest release: 2013.2.716 (July 17, 2013)<br />
      License: <a href="http://www.kendoui.com/faq/licensing.aspx">GPLv3 or commercial</a>
     </p>
   </section>
