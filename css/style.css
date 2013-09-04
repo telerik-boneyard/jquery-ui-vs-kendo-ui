@@ -56,6 +56,9 @@ header > div {
  background: #16AA16;
  color: white;
 }
+.side-by-side {
+ overflow: hidden;
+}
 .side-by-side > div {
  display: block;
  float: left;
