@@ -65,7 +65,8 @@ header > div {
  width: 49%;
 }
 .side-by-side img { max-width: 100%; }
-.side-by-side p {
+.side-by-side p, p.caption {
+ margin-top: 0;
  color: #F0713A;
  font-style: italic;
 }
