@@ -224,13 +224,12 @@
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script>
 	(function() {
-		var kendoApplication,
+		var jQueryBody,
+			kendoBody,
+			jQueryWindow,
+			kendoWindow,
 			jQueryFrame = $( "iframe" ).get( 0 ),
-			kendoFrame = $( "iframe" ).get( 1 ),
-			jQueryWindow = jQueryFrame.contentWindow,
-			kendoWindow = kendoFrame.contentWindow,
-			jQueryBody = $( jQueryWindow.document.body ),
-			kendoBody = $( kendoWindow.document.body ),
+			kendoFrame = $( "iframe" ).get( 1 );
 			pageCount = 0,
 			readyCount = 0,
 			widgetCount = $( "[data-library=jQuery]" ).length;
@@ -238,11 +237,15 @@
 		function readyCheck() {
 			if ( readyCount == 1 ) {
 				$( "button" ).prop( "disabled", false );
+				jQueryWindow = jQueryFrame.contentWindow;
+				kendoWindow = kendoFrame.contentWindow;
+				jQueryBody = $( jQueryWindow.document.body );
+				kendoBody = $( kendoWindow.document.body );
 			}
 			readyCount++;
 		};
-		$( jQueryFrame ).ready( readyCheck );
-		$( kendoFrame ).ready( readyCheck );
+		$( jQueryFrame ).load( readyCheck );
+		$( kendoFrame ).load( readyCheck );
 
 		$( "button" ).on( "click", function( event ) {
 			event.preventDefault();
