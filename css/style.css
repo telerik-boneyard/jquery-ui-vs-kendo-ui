@@ -77,6 +77,8 @@ header > div {
  font-style: italic;
 }
 #nav_container {
+ background: #F3F5F8;
+ border-right: 1px solid #E6E8EC;
  position: fixed;
  top: 0;
  left: 0;
@@ -110,9 +112,9 @@ nav li {
 }
 #content {
  float: left;
- margin-left: 295px;
- width: -webkit-calc(97% - 295px);
- width: calc(97% - 295px);
+ margin-left: 305px;
+ width: -webkit-calc(97% - 300px);
+ width: calc(97% - 300px);
 }
 .social-buttons {
  margin-top: 1em;
