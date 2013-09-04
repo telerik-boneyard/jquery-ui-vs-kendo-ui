@@ -111,6 +111,8 @@ nav li {
 #content {
  float: left;
  margin-left: 295px;
+ width: -webkit-calc(97% - 295px);
+ width: calc(97% - 295px);
 }
 .social-buttons {
  margin-top: 1em;
