@@ -70,6 +70,12 @@ header > div {
 .side-by-side.weigh-left > div:last-child {
  width: 24%;
 }
+.side-by-side.weigh-right > div:first-child {
+ width: 40%;
+}
+.side-by-side.weigh-right > div:last-child {
+ width: 59%;
+}
 .side-by-side img { max-width: 100%; }
 .side-by-side p, p.caption {
  margin-top: 0;
