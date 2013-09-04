@@ -111,6 +111,10 @@ nav li {
  text-align: center;
 }
 
+.k-panelbar .k-content {
+	padding: 1em 0.5em;
+}
+
 @media (max-width: 1000px) {
  .divider { display: block; padding: 0; }
 }
