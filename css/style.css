@@ -64,6 +64,12 @@ header > div {
  float: left;
  width: 49%;
 }
+.side-by-side.weigh-left > div:first-child {
+ width: 75%;
+}
+.side-by-side.weigh-left > div:last-child {
+ width: 24%;
+}
 .side-by-side img { max-width: 100%; }
 .side-by-side p, p.caption {
  margin-top: 0;
