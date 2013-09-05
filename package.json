@@ -1,0 +1,8 @@
+{
+	"name": "jquery-ui-vs-kendo-ui",
+	"version": "1.0.0",
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-smushit": "1.1.2"
+	}
+}
