@@ -1,82 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>jQuery UI vs Kendo UI</title>
-  <meta name="description" content="A feature comparison between jQuery UI and Kendo UI.">
-  <meta name="author" content="John Bristowe (john.bristowe@telerik.com), TJ VanToll (tj.vantoll@telerik.com)">
+  <meta name="description" content="A feature comparison between jQuery UI and Kendo UI." />
+  <meta name="author" content="John Bristowe, john.bristowe@telerik.com" />
   <!--[if lt IE 9]>
    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.common.min.css">
-  <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.default.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link href='http://fonts.googleapis.com/css?family=Signika:400,700,600,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="http://cdn.kendostatic.com/2012.3.1315/styles/kendo.common.min.css" />
+  <link rel="stylesheet" type="text/css" href="http://cdn.kendostatic.com/2012.3.1315/styles/kendo.default.min.css" />
+  <style type="text/css">
+   body {
+    font-family: "Signika", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: auto;
+    width: 90%;
+   }
+   h1 {
+    font-size: 3em;
+    text-align: center;
+   }
+   .social-buttons {
+     text-align: center;
+   }
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdn.kendostatic.com/2012.3.1315/js/kendo.all.min.js"></script>
  </head>
  <body>
-  <div id="nav_container">
-   <nav>
-    <ul>
-     <li><a class="k-button" href="#disclaimer">Disclaimer</a></li>
-    </ul>
-    <h3>jQuery UI vs Kendo UI</h3>
-    <ul>
-     <li><a class="k-button" href="#introduction">Introduction</a></li>
-     <li><a class="k-button" href="#why-kendo-ui">Why Kendo UI?</a></li>
-     <li><a class="k-button" href="#quick-comparison">Quick Comparison</a></li>
-     <li><a class="k-button" href="#widgets">Widgets</a></li>
-     <li><a class="k-button" href="#interactions">Interactions</a></li>
-     <li><a class="k-button" href="#themes">Themes</a></li>
-     <li><a class="k-button" href="#templates">Templates</a></li>
-     <li><a class="k-button" href="#datasource">DataSource</a></li>
-     <li><a class="k-button" href="#data-visualization">Data Visualization</a></li>
-     <li><a class="k-button" href="#globalization">Globalization</a></li>
-     <li><a class="k-button" href="#validation">Validation</a></li>
-     <li><a class="k-button" href="#browser-compatibility">Browser Compatibility</a></li>
-     <li><a class="k-button" href="#web-standards-support">Web Standards Support</a></li>
-     <li><a class="k-button" href="#product-support">Product Support</a></li>
-    </ul>
-    <h3>jQuery Mobile vs Kendo UI Mobile</h3>
-    <ul>
-     <li><a class="k-button" href="#mobile-introduction">Introduction</a></li>
-     <li><a class="k-button" href="#mobile-widgets">Widgets</a></li>
-     <li><a class="k-button" href="#mobile-themes">Themes</a></li>
-     <li><a class="k-button" href="#mobile-transitions">Page Transitions</a></li>
-     <li><a class="k-button" href="#mobile-browser-support">Browser Compatibility</a></li>
-    </ul>
-    <ul>
-     <li><a class="k-button" href="#updates">Updates</a></li>
-     <li><a class="k-button" href="#comments">Comments</a></li>
-    </ul>
-   </nav>
-   <div class="social-buttons">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="JohnBristowe">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    <div class="g-plusone" data-size="medium" data-annotation="bubble"></div>
-    <script type="text/javascript">
-     (function() {
-      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-      po.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-     })();
-    </script>
-   </div>
-  </div>
-  <div id="content">
-  <header>
-   <div class="jquery-ui-logo">
-    <img src="img/jquery-ui-logo.png" alt="jQuery UI">
-   </div>
-   <div class="divider">
-    <h2>VS</h2>
-   </div>
-   <div class="kendo-logo">
-    <img src="img/kendo-logo.png" alt="Kendo UI">
-   </div>
-  </header>
-  <p>We've spent a lot of time talking to customers about <a href="http://www.kendoui.com/">Kendo UI</a>, our framework for building rich web applications with modern web standards like HTML5, CSS3, and <a href="http://jquery.com/">jQuery</a>. Since its launch in November 2011, we've answered many questions on the <a href="http://www.kendoui.com/forums.aspx">Kendo UI Forums</a>, <a href="http://stackoverflow.com/">Stack Overflow</a>, Twitter and elsewhere. One of the most frequently asked questions involves comparing Kendo UI with <a href="http://jqueryui.com/">jQuery UI</a> and <a href="http://jquerymobile.com">jQuery Mobile</a>. On this site, we've documented the similarities and differences between these two frameworks in the hope of providing an answer to this question in a detailed manner than what you may have read, seen, or heard elsewhere.</p>
-
+  <h1>jQuery UI vs Kendo UI</h1>
+  <p>We've spent a lot of time talking to customers about <a href="http://www.kendoui.com/">Kendo UI</a>, our framework for building rich web applications with modern web standards like HTML5, CSS3, and <a href="http://jquery.com/">jQuery</a>. Since its launch in November 2011, we've answered many questions on the <a href="http://www.kendoui.com/forums.aspx">Kendo UI Forums</a>, <a href="http://stackoverflow.com/">Stack Overflow</a>, Twitter and elsewhere. One of the most frequently asked questions involves comparing Kendo UI with <a href="http://jqueryui.com/">jQuery UI</a>. On this site, I've documented the similarities and differences between these two frameworks in the hope of providing an answer to this question in a detailed manner than what you may have read, seen, or heard elsewhere.</p>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="JohnBristowe">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <div class="g-plusone" data-size="medium" data-annotation="bubble"></div>
+  <script type="text/javascript">
+   (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+  </script>
   <section id="disclaimer">
    <h2>Disclaimer</h2>
    <p>I work for <a href="http://www.telerik.com/">Telerik</a> as a Developer Evangelist. My role is to help developers be awesome with Kendo UI and our other products. That stated, our views of the world may differ on the matter of jQuery UI vs Kendo UI. It is my goal to present a detailed and accurate comparison of these frameworks so that you can make an informed decision if you in midst of an evaluation. By the way, if you see something that I've stuffed up, please let me know!</p>
@@ -84,503 +54,357 @@
     <a href="http://bristowe.com/">John Bristowe</a> (<a href="http://twitter.com/JohnBristowe">@JohnBristowe</a>)<br />
     January 2012
    </p>
-   <hr>
-   <p>I work for Telerik as a Developer Advocate, and am also a member of the <a href="http://jqueryui.com/about/">jQuery UI team</a>. Therefore I have the unique position of having a double bias when comparing these frameworks. My goal is to provide an accurate comparison to aid developers.</p>
-   <p>
-    <a href="http://tjvantoll.com">TJ VanToll</a> (<a href="http://twitter.com/tjvantoll">@tjvantoll</a>)<br>
-    September 2013
   </section>
-
-  <section id="introduction">
-   <h2>Introduction</h2>
-    <p>Kendo UI and jQuery UI are JavaScript frameworks that provide many useful and robust building blocks of a modern web application. Both are built on top of <a href="http://jquery.com/">jQuery</a>, the most popular JavaScript library in use today.</p>
-
-    <hr>
-
-    <h3>jQuery UI</h3>
-    <p>jQuery UI is part of the <a href="http://jquery.org/">jQuery Project</a> and is described as:</p>
-    <blockquote>jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.</blockquote>
-    <p>jQuery UI is a popular JavaScript framework in the web developer community.</p>
-    <p><a target="_blank" href="http://jqueryui.com/demos/" class="k-button">Demos &amp; Documentation &#0187;</a></p>
-    <p>
-     Latest release: 1.10.3 (May 3, 2013)<br>
-     License: <a href="http://jquery.org/license/">MIT</a>
-    </p>
-
-    <hr>
-
-    <h3>Kendo UI</h3>
-    <p>Kendo UI is a pure JavaScript framework with CSS defined for styling and behaviors. It is developed by Telerik and is comprised of the following three products:</p>
-    <dl>
-     <dt><a href="http://www.kendoui.com/web.aspx">Kendo UI Web</a></dt>
-     <dd>Contains the core functionality of Kendo UI framework, including the DataSource component, templates, drag-and-drop, and themeable widgets with integrated animations.</dd>
-     <dt><a href="http://www.kendoui.com/dataviz.aspx">Kendo UI DataViz</a></dt>
-     <dd>A collection of HTML5-powered, mobile-ready, data visualization widgets.</dd>
-     <dt><a href="http://www.kendoui.com/mobile.aspx">Kendo UI Mobile</a></dt>
-     <dd>Native UI widgets for building HTML5-powered apps and sites for modern mobile devices.</dd>
-    </dl>
-    <p><a target="_blank" href="http://demos.kendoui.com/" class="k-button">Demos &amp; Documentation &#0187;</a></p>
-    <p>
-     Latest release: 2013.2.716 (July 17, 2013)<br>
-     License: <a href="http://www.kendoui.com/faq/licensing.aspx">GPLv3 or commercial</a>
-    </p>
-  </section>
-
-  <section id="why-kendo-ui">
-   <h2>Why Kendo UI?</h2>
-   <p>Kendo UI is an end-to-end solution for modern client-side development. It's everything you need for building applications for modern web standards, saving developers time and minimizing frustration by providing an integrated - yet highly modular - framework.</p>
-   <p>Kendo UI framework is developed by Telerik – a leading provider of development and testing tools for web, desktop and mobile applications. We are trusted by over 100,000 customers worldwide for our innovation and industry-best technical support. It is our commitment to provided first class support and a rapid, regular release cycle.</p>
-   <p>When building Kendo UI, we wanted to ensure that the out-of-the-box features were highly-tuned to the tasks at hand and capable of maximum performance. We also wanted to minimize external dependencies so that Kendo UI can be quickly evolved based on feedback. To do that, Kendo UI provides many of its own implementations for core framework features.</p>
-   <p>You can use jQuery UI with Kendo UI without conflict. However, Kendo UI is not based on jQuery UI. Kendo UI has been built from the ground-up to deliver a rich, HTML5-based application framework that is tuned for performance and positioned to rapidly evolve over time.</p>
-   <p><a target="_blank" href="http://www.kendoui.com/faq/faq.aspx" class="k-button">Kendo UI FAQs &#0187;</a></p>
-   <p>Many more widgets, features, and overall improvements are scheduled for Kendo UI Web, Kendo UI DataViz, and Kendo UI Mobile. For more information about what's coming, please take some time to <a href="http://www.kendoui.com/roadmap.aspx">review our roadmap</a>!</p>
-  </section>
-
-  <section id="quick-comparison">
-   <h2>Quick Comparison</h2>
-   <p>The following table is based on data from <a href="http://jqueryui.com/">jqueryui.com</a> and <a href="http://kendoui.com/">kendoui.com</a>:</p>
-   <table id="quick-comparison-grid">
-    <thead>
-     <tr>
-      <th>Category</th>
-      <th>jQuery UI</th>
-      <th>Kendo UI</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>Widgets (Total)</td>
-      <td>Yes (12)</td>
-      <td>Yes (23)</td>
-     </tr>
-     <tr>
-      <td>Themes (Total)</td>
-      <td>Yes (24)</td>
-      <td>Yes (11)</td>
-     </tr>
-     <tr>
-      <td>Effects (Total)</td>
-      <td>Yes (13)</td>
-      <td>Yes (8)</td>
-     </tr>
-     <tr>
-      <td>Interactions (Total)</td>
-      <td>Yes (5)</td>
-      <td>Yes (6)</td>
-     </tr>
-     <tr>
-      <td>Templates</td>
-      <td>No</td>
-      <td>Yes</td>
-     </tr>
-     <tr>
-      <td>DataSource</td>
-      <td>No (see <a href="http://wiki.jqueryui.com/w/page/47179141/Dataview">Dataview</a>)</td>
-      <td>Yes</td>
-     </tr>
-     <tr>
-      <td><a href="http://en.wikipedia.org/wiki/Model_View_ViewModel">Model-View-ViewModel</a> (MVVM)</td>
-      <td>No</td>
-      <td>Yes</td>
-     </tr>
-     <tr>
-      <td>Data Visualization</td>
-      <td>No</td>
-      <td>Yes</td>
-     </tr>
-     <tr>
-      <td>Globalization</td>
-      <td>Yes (via <a href="https://github.com/jquery/globalize">Globalize</a>)</td>
-      <td>Yes</td>
-     </tr>
-     <tr>
-      <td>Validation</td>
-      <td>No</td>
-      <td>Yes</td>
-     </tr>
-     <tr>
-      <td>Browser Support</td>
-      <td>IE 7+, Latest 2 versions of Chrome, Firefox, Safari, and Opera</td>
-      <td>IE 7+, Firefox ESR, Safari 5+ (OS X), Opera 11+, Chrome, Android 2.2+, iOS 4.0+</td>
-     </tr>
-     <tr>
-      <td>Mobile Device Compatibility</td>
-      <td>No (see <a href="http://touchpunch.furf.com/">jQuery UI Touch Punch</a>)</td>
-      <td>Yes</td>
-     </tr>
-    </tbody>
-   </table>
-  </section>
-
-  <section id="widgets">
-   <h2>Widgets</h2>
-   <p>jQuery UI and Kendo UI both provide widgets for constructing the front-end interface of your web applications. These widgets are designed to support progressive enhancement, allowing users in older browsers to access existing content and functionality of native HTML types if certain capabilities aren't accessible by the framework.</p>
-   <ul id="jquery-ui-widgets-panelbar">
-    <li>
-     jQuery UI Widgets (11)
-     <div></div>
-    </li>
-   </ul>
-   <ul id="kendo-ui-widgets-panelbar">
-    <li>
-     Kendo UI Widgets (23)
-     <div></div>
-    </li>
-   </ul>
-   <p><a target="_blank" href="demos/widgets.html" class="k-button callout">View all Widgets for Comparison</a></p>
-   <p>There are a few additional things worth mentioning here:</p>
-   <div style="padding-bottom: 15px;">
-    <ul>
-     <li>There are many additional widgets are available from the developer community.</li>
-     <li>Kendo UI's widgets can be <a href="http://docs.kendoui.com/getting-started/data-attribute-initialization">declaratively initialized using HTML5 data attributes</a>.</li>
-     <li>The Autocomplete widget in jQuery UI combines the functionality of the AutoComplete and ComboBox widgets in Kendo UI Web.</li>
-     <li>The Datepicker widget in jQuery UI combines the functionality of the Calendar and DatePicker widgets in Kendo UI Web.</li>
-     <li>jQuery UI's <a href="http://wiki.jqueryui.com/w/page/12138056/Selectmenu">selectmenu widget</a> will be released in 1.11.</li>
-     <li>Future widgets for jQuery UI are noted on its <a href="http://wiki.jqueryui.com/w/page/12138038/Roadmap">roadmap</a>.</li>
-     <li>Finally, Kendo UI is regularly adding new widgets and improvements to existing ones. Check out the <a href="http://www.kendoui.com/web/roadmap.aspx">Kendo UI Web roadmap</a>, the <a href="http://www.kendoui.com/dataviz/roadmap.aspx">Kendo UI DataViz roadmap</a>, and the <a href="http://www.kendoui.com/mobile/roadmap.aspx">Kendo UI Mobile roadmap</a> for more information.</li>
-    </ul>
-   </div>
-  </section>
-
-  <section id="themes">
-   <h2>Themes</h2>
-   <p>Widgets in both jQuery UI and Kendo UI support themes and styling via <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>. Both frameworks also provide a number of themes out-of-the-box along with a means of creating custom themes.</p>
-   <ul id="jquery-ui-themes-panelbar">
-    <li>
-     jQuery UI Themes (24)
-     <div></div>
-    </li>
-   </ul>
-   <ul id="kendo-ui-themes-panelbar">
-    <li>
-     Kendo UI Themes (11)
-     <div></div>
-    </li>
-   </ul>
-   <p>Both jQuery UI and Kendo UI support the ability to customize themes. This can be done either manually or through a visual tool that's provided by both frameworks; the jQuery UI <a href="http://jqueryui.com/themeroller/">ThemeRoller</a> and the Kendo UI <a href="http://demos.kendoui.com/themebuilder/">ThemeBuilder</a>.</p>
-
-   <div class="side-by-side">
-    <div>
-     <img src="img/jquery-ui-themeroller.png" alt="Display of jQuery UI's ThemeRoller">
-     <p>jQuery UI's ThemeRoller</p>
-    </div>
-    <div>
-     <img src="img/kendo-ui-themebuilder.png" alt="Display of Kendo UI's ThemeBuilder">
-     <p>Kendo UI's ThemeBuilder</p>
-    </div>
-  </div>
-
-   <p>Both the jQuery UI ThemeRoller and the Kendo UI ThemeBuilder serve the same purpose; to allow the quick creation of custom themes for widgets. However, they differ slightly in their approach. While the jQuery UI ThemeRoller provides an integrated gallery of themes, the Kendo UI ThemeBuilder auto-generates and displays the CSS and <a href="http://lesscss.org/">LESS</a> representations of the custom themes that are generated.</p>
-  </section>
-
-  <section id="effects">
-   <h2>Effects</h2>
-   <p>jQuery UI supports a rich framework for integrated effects and animations that can be applied to any DOM element. These effects include the ability to animate colours and conduct easing functions. Kendo UI has fewer integrated effects and easing functions than jQuery UI. These are also only present to support the visual transitions that occurs on its widgets.</p>
-   <p>
-    <ul id="jquery-ui-effects-panelbar">
-     <li>
-      jQuery UI Effects (13)
-      <div></div>
-     </li>
-    </ul>
-    <ul id="kendo-ui-effects-panelbar">
-     <li>
-      Kendo UI Effects (5)
-      <div></div>
-     </li>
-    </ul>
-   </p>
-  </section>
-
-  <section id="interactions">
-   <h2>Interactions</h2>
-   <p>jQuery UI includes a number of interactions to that you can use to apply to DOM elements. Kendo UI defines interactions that are used as part of its widgets.</p>
-   <ul id="jquery-ui-interactions-panelbar">
-    <li>
-     jQuery UI Interactions (5)
-     <div></div>
-    </li>
-   </ul>
-   <ul id="kendo-ui-interactions-panelbar">
-    <li>
-     Kendo UI Interactions (6)
-     <div></div>
-    </li>
-   </ul>
-   <p>The interactions provided by both jQuery UI and Kendo UI are highly customizable.</p>
-   <p>jQuery UI's interactions do not support touch events and are <a href="http://wiki.jqueryui.com/w/page/50166448/Interaction">in the process of being rewritten</a>.</p>
-  </section>
-
-  <section id="templates">
-   <h2>Templates</h2>
-   <p>jQuery UI does not support templating.</p>
-   <p>Kendo UI supports a simple yet high performance templating engine.</p>
-   <p>In August 2011, Todd Anglin (<a href="http://twitter.com/toddanglin">@ToddAnglin</a>) did a great job providing an overview the templating engine of Kendo UI in his blog post, <a href="http://kendoui.com/blogs/archive/11-08-26/kendo_ui_templates_faster_than_a_speeding_resig.aspx">Kendo UI Templates: Faster than a Speeding Resig</a>:</p>
-   <blockquote>
-    <p>One of the key components included in Kendo UI is a very high-performance JavaScript "micro-templating" implementation. Almost every JavaScript front-end development project needs templating, so consistent with Kendo UI's goal of providing everything you need for JavaScript development in a seamless, compact package, we've included a templating solution out-of-the-box.</p>
-   </blockquote>
-   <p>A performance comparison of JavaScript template engines can be reviewed <a href="http://jsperf.com/dom-vs-innerhtml-based-templating/200">here</a>.</p>
-   <p><a target="_blank" href="http://demos.kendoui.com/web/templates/index.html" class="k-button">Kendo UI Template Demo</a></p>
-  </section>
-
-  <section id="datasource">
-   <h2>DataSource</h2>
-   <p>A significant difference between jQuery UI and Kendo UI is support for a DataSource component.</p>
-   <p>Currently, a DataSource-like component called Dataview is under development for jQuery UI. You can read more about its progress on <a href="http://wiki.jqueryui.com/w/page/47179141/Dataview">the wiki page for Dataview</a>.</p>
-   <p>The DataSource component is a powerful abstraction of data in Kendo UI and is fundamental to the way in which databinding is conducted with widgets. While the concept of databinding of local and remote data source is supported in jQuery UI, no such abstraction exists.</p>
-   <p>From the demo page for the DataSource component:</p>
-   <blockquote>
-    <p>The DataSource component is an abstraction for using local (arrays of JavaScript objects) or remote (XML, JSON, JSONP) data. It fully supports CRUD (create, read, update, delete) data operations and provides both local and server-side support for sorting, paging, filtering, grouping, and aggregates.</p>
-   </blockquote>
-   <p>The DataSource component is powerful abstraction of Kendo UI and provides developers with the ability to perform local and remote databinding quickly.</p>
-   <p><a target="_blank" href="http://demos.kendoui.com/web/datasource/index.html" class="k-button">Kendo UI DataSource Demo</a></p>
-  </section>
-
-  <section id="data-visualization">
-   <h2>Data Visualization</h2>
-   <p>jQuery UI does not provide a framework for data visualizations.</p>
-   <p>Kendo UI provides a library of data visualizations through Kendo UI DataViz, an API that provides Pie, Line, Bar, Column, and Scatter charts to your applications and websites.</p>
-   <blockquote>Kendo UI DataViz automatically uses <a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> or <a href="http://en.wikipedia.org/wiki/Vml">VML</a> to render rich data visualizations, depending on the capabilities of the browser. This makes it possible to render Kendo UI DataViz charts in [many] environments, from older browsers, like IE7, to mobile browsers on platforms like iOS and Android (Opera and the Android browser v3 and up).</blockquote>
-   <p>Kendo UI DataViz is underpinned by the effects and interactions framework of Kendo UI to provide visual animations when rendering to the browser.</p>
-   <div>
-    <img src="img/kendo-dataviz.png" alt="Display of 4 of Kendo UI's data visualizations" style="max-width: 100%;">
-    <p class="caption">Examples of Kendo UI's Data Visualizations</p>
-   </div>
-   <p><a target="_blank" href="http://demos.kendoui.com/dataviz/overview/index.html" class="k-button">Kendo UI DataViz Demos</a></p>
-  </section>
-
-  <section id="globalization">
-   <h2>Globalization</h2>
-   <p>Both jQuery UI and Kendo UI provide excellent support for globalization. Both frameworks have localized widgets for dates, currency, and time.
-   <div class="side-by-side">
-    <div>
-     <img src="img/jquery-globalization.png" alt="Display of jQuery UI's globalization">
-     <p>jQuery UI's globalization options</p>
-    </div>
-    <div>
-     <img src="img/kendo-globalization.png" alt="Display of Kendo UI's globalization">
-     <p>Kendo UI's globalization options</p>
-    </div>
-  </div>
-   </p>
-   <p>
-    <a target="_blank" href="http://jqueryui.com/datepicker/#localization" class="k-button">jQuery UI Date Demo</a>
-    <a target="_blank" href="http://jqueryui.com/spinner/#currency" class="k-button">jQuery UI Currency Demo</a>
-    <a target="_blank" href="http://jqueryui.com/spinner/#time" class="k-button">jQuery UI Time Demo</a>
-   </p>
-   <p><a target="_blank" href="http://demos.kendoui.com/web/globalization/index.html" class="k-button">Kendo UI Globalization Demo</a></p>
-  </section>
-
-  <section id="validation">
-   <h2>Validation</h2>
-   <p>jQuery UI does not provide a framework for validation.</p>
-   <p>Kendo UI includes validation out-of-the-box via the Validator component, which offers a mechanism of performing client-side form validation. Built around the HTML5 form validation attributes, it supports variety of built-in validation rules, but also provides a convenient way for setting custom rules handling.</p>
-   <div class="side-by-side">
-    <div>
-     <img src="img/kendo-validator.png" alt="Visual display of Kendo UI's validator">
-     <p>Kendo UI's Validator</p>
-    </div>
-   </div>
-   <p><a target="_blank" href="http://demos.kendoui.com/web/validator/index.html" class="k-button">Kendo UI Validator Demo</a></p>
-  </section>
-
-  <section id="browser-compatibility">
-   <h2>Browser Compatibility</h2>
-   <p>Both jQuery UI and Kendo UI feature excellent support for older browsers.</p>
-   <ul id="jquery-ui-browser-compatibility-panelbar">
-    <li>
-     jQuery UI Browser Compatibility
-     <div></div>
-    </li>
-   </ul>
-   <ul id="kendo-ui-browser-compatibility-panelbar">
-    <li>
-     Kendo UI Browser Compatibility
-     <div></div>
-    </li>
-   </ul>
-   <p>The big difference is jQuery UI does not support mobile browsers and Kendo UI does. While most things in jQuery UI work fine on mobile browsers, the interactions do not. jQuery UI's interactions are <a href="http://wiki.jqueryui.com/w/page/50166448/Interaction">being rewritten</a> to support touch and pointer events, until then using <a href="http://touchpunch.furf.com/">jQuery UI Touch Punch</a> is recommended.</p>
-   <p>Kendo UI offers support for touch and mobile devices out-of-the-box. All widgets in Kendo UI provide full support for touchscreen devices, such as the iPad. The support for touch input is also extended to its support for drag-and-drop interactions with any DOM element.</p>
-   <p>jQuery UI <a href="http://jqueryui.com/upgrade-guide/1.10/#removed-support-for-ie6">removed support for IE6 in 1.10</a> and <a href="http://www.kendoui.com/blogs/archive/11-10-07/kendo_ui_beta_2_now_available.aspx">the Kendo UI team dropped support for IE6 after Beta 2</a>. jQuery UI <a href="http://wiki.jqueryui.com/w/page/12138038/Roadmap">plans to remove support for IE7 in 1.13</a>.</p>
-  </section>
-
-  <section id="web-standards-support">
-   <h2>Web Standards Support</h2>
-   <p>jQuery UI and Kendo UI leverage and utilize modern web standards when supported by the browser. Note: This also includes incorporating aspects of HTML5 and CSS3. The following isn't exhaustive; rather, it provides a set of examples where both jQuery UI and Kendo UI either incorporate or leverage modern web standards.</p>
-   <ul id="jquery-ui-html5-support-panelbar">
-    <li>
-     jQuery UI Web Standards Support
-     <div></div>
-    </li>
-   </ul>
-   <ul id="kendo-ui-html5-support-panelbar">
-    <li>
-     Kendo UI Web Standards Support
-     <div></div>
-    </li>
-   </ul>
-   <p>Accessibility is an important consideration for both jQuery UI and Kendo UI. Both frameworks provide keyboard accessible widgets, support ARIA attributes, and optimize user experiences on assistive devices such as screen readers.</p>
-  </section>
-
-  <section id="product-support">
-   <h2>Product Support</h2>
-   <p>Both jQuery UI and Kendo UI feature support through a number of different means. Many web developers can find support online in forums and sites like Stack Overflow.</p>
-   <p>Support for jQuery UI is described on its website as follows:</p>
-   <blockquote>
-    <p>The jQuery UI community is very active and provides a friendly, helpful environment when you need development advice or have ideas on how to improve a script. The jQuery UI Team encourages everyone to actively participate in the development of the library.</p>
-   </blockquote>
-   <p>Commercial support for jQuery UI is available through third-party sponsors of the jQuery and jQuery UI projects.</p> 
-   <p>For the commercial version of Kendo UI, Telerik offers a 48-hour guaranteed response time for tickets submitted to its support system. Additionally, Telerik is committed to providing all service packs and weekly builds for commercial customers.</p>
-  </section>
-
-  <section id="mobile-introduction">
-   <header>
-    <div class="jquery-mobile-logo">
-     <img src="img/jquery-mobile-logo.png" alt="jQuery Mobile">
-    </div>
-    <div class="divider">
-     <h2>VS</h2>
-    </div>
-    <div class="kendo-logo">
-     <img src="img/kendo-logo.png" alt="Kendo UI">
-    </div>
-   </header>
-   <p>jQuery Mobile and Kendo UI Mobile are jQuery based frameworks to create mobile web sites and applications.
-   <hr>
-   <h3>jQuery Mobile</h3>
-   <p><a href="http://jquerymobile.com">jQuery Mobile</a> is described as:</p>
-   <blockquote>A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation. Its lightweight code is built with progressive enhancement, and has a flexible, easily themeable design.</blockquote>
-   <p>
-    Latest release: 1.3.2 (July 19, 2013), 1.4 Alpha 2 (August 15th, 2013)<br>
-    License: <a href="http://jquery.org/license/">MIT</a>
-   </p>
-
-   <hr>
-   <h3>Kendo UI Mobile</h3>
-   <p>Kendo UI Mobile is a framework that allows you to build mobile apps that look and feel native with a single HTML5 and JavaScript codebase.</p>
-    <p>
-     Latest release: 2013.2.716 (July 17, 2013)<br>
-     License: <a href="http://www.kendoui.com/faq/licensing.aspx">GPLv3 or commercial</a>
-    </p>
-  </section>
-
-  <section id="mobile-widgets">
-   <h2>Widgets</h2>
-   <p>Both jQuery Mobile and Kendo UI Mobile provide a suite of widgets that can be used to create highly interactive user interfaces that target mobile devices.</p>
-   <ul id="jquery-mobile-widgets-panelbar">
-    <li>
-     jQuery Mobile Widgets (22)
-     <div></div>
-    </li>
-   </ul>
-   <ul id="kendo-mobile-widgets-panelbar">
-    <li>
-     Kendo Mobile Widgets (11)
-     <div></div>
-    </li>
-   </ul>
-   <p>Here's a visual sampling of the widgets that each framework provides.</p>
-   <div class="side-by-side">
-    <div>
-     <img src="img/jquery-mobile-widgets.png" alt="Visual sampling of widgets provided by jQuery Mobile">
-     <p>Sample of jQuery Mobile widgets</p>
-    </div>
-    <div>
-     <img src="img/kendo-mobile-widgets.png" alt="Visual sampling of widgets provided by Kendo UI Mobile">
-     <p>Sample of Kendo UI Mobile widgets</p>
-    </div>
-   </div>
-   <p>
-    <a target="_blank" class="k-button" href="http://view.jquerymobile.com/1.3.2/dist/demos/">jQuery Mobile Widget Demos</a>
-    <a target="_blank" class="k-button" href="http://demos.kendoui.com/mobile/overview/index.html#/">Kendo UI Mobile Widget Demos</a>
-   </p>
-   <p>A couple of additional notes.</p>
-   <ul>
-    <li>jQuery Mobile 1.4 will include a tabs widget.</li>
-    <li>jQuery Mobile's widgets are built with the <a href="http://api.jqueryui.com/jquery.widget/">widget factory</a>, therefore they use the same syntax as <a href="http://api.jqueryui.com/category/widgets/">jQuery UI's widgets</a>.</li>
-    <li>The widgets shown above are using Kendo UI Mobile's flat skin.</li>
-    <li>jQuery Mobile and Kendo UI Mobile both support creating widgets declaratively (using only markup), as well as explicitly in JS.</li>
-   </ul>
-  </section>
-
-  <section id="mobile-themes">
-   <h2>Themes</h2>
-   <p>jQuery Mobile and Kendo UI mobile use completely different mechanisms to let you customize the look of your web sites or applications.</p>
-   <hr>
-   <h3>jQuery Mobile</h3>
-   <p>jQuery Mobile has the concept of swatches that you can create to style individual widgets and elements. A theme can have up to 26 swatches and they are customizable using <a href="http://jquerymobile.com/themeroller/">jQuery Mobile's ThemeRoller</a>.</p>
-   <div class="side-by-side weigh-right">
-    <div>
-     <img src="img/jquery-mobile-swatches.png" alt="Display of the swatches">
-     <p>Example of the swatches applied to buttons</p>
-    </div>
-    <div>
-     <img src="img/jquery-mobile-themeroller.png" alt="Display of ThemeRoller">
-     <p>jQuery Mobile's ThemeRoller</p>
-    </div>
-   </div>
-   <p>
-    <a target="_blank" class="k-button" href="http://jquerymobile.com/themeroller/">jQuery Mobile's ThemeRoller</a>
-    <a target="_blank" class="k-button" href="http://view.jquerymobile.com/1.3.2/dist/demos/faq/how-does-theming-work.html">jQuery Mobile's theming docs</a>
-   </p>
-   <hr>
-   <h3>Kendo UI Mobile</h3>
-   <p>Kendo UI Mobile features themes that replicate native mobile device OS experiences. These themes can be configured using <a href="http://demos.kendoui.com/mobilethemebuilder/index.html">Kendo UI Mobile's ThemeBuilder</a>. The <a href="http://www.kendoui.com/web/whats-new/q2-2013-mobile.aspx">2013 Q2 release of Kendo UI Mobile</a> included a new flat theme in line with iOS 7.</p>
-   <div class="side-by-side weigh-left">
-    <div>
-     <img src="img/kendo-mobile-themebuilder.png">
-     <p>Kendo UI Mobile's ThemeBuilder</p>
-    </div>
-    <div>
-     <img src="img/kendo-mobile-flat.png">
-     <p>Example of Kendo UI Mobile's flat theme</p>
-    </div>
-   </div>
-   <p>
-    <a target="_blank" class="k-button" href="http://demos.kendoui.com/mobilethemebuilder/index.html">Kendo UI Mobile's ThemeBuilder</a>
-   </p>
-  </section>
-
-  <section id="mobile-transitions">
-   <h2>Page Transitions</h2>
-   <p>Both jQuery Mobile and Kendo UI Mobile feature a series of CSS based transitions to transfer users between views or pages.</p>
-   <a target="_blank" href="demos/transitions.html" class="k-button callout">Compare Transitions in a Demo</a>
-   <p>
-    <a target="_blank" class="k-button" href="http://view.jquerymobile.com/1.3.2/dist/demos/widgets/transitions/">jQuery Mobile's Transition Demos</a>
-    <a target="_blank" class="k-button" href="http://demos.kendoui.com/mobile/application/transitions.html#view-transitions">Kendo UI Mobile's Transition Demos</a>
-   </p>
-  </section>
-
-  <section id="mobile-browser-support">
-   <h2>Browser Compatibility</h2>
-   <p>Both jQuery Mobile and Kendo UI Mobile support all major phone operating systems and browsers.</p>
-   <p>Because of jQuery Mobile's progressive enhancement approach, the framework supports essentially all browsers in some capacity. The level of support is divided into three tiers - A grade (full support), B grade (full support, no AJAX navigation), and C grade (basic HTML). The full support list is too extensive to list here, but A grade support includes iOS 4+, Android 2.2+, IE8+.</p>
-   <p>
-    <a target="_blank" class="k-button" href="http://jquerymobile.com/gbs/">jQuery Mobile Graded Browser Support</a>
-   </p>
-   <p>Kendo UI Mobile supports:</p>
-   <ul>
-    <li>iOS 4.0+</li>
-    <li>Android 2.2+</li>
-    <li>Windows Phone 8+</li>
-    <li>Blackberry 7.0+</li>
-   </ul>
-  </section>
-
   <section id="updates">
    <h2>Updates</h2>
-   <ul>
-    <li>
-     <strong>January 30, 2012</strong>: Replaced social buttons with Twitter and G+; updated <a href="#datasource-item">DataSource section</a> to include (upcoming) Dataview component for jQuery UI; updated Mobile Device Compatibility section to include information about touch interaction updates pending for jQuery UI.
-    </li>
-    <li>
-     <strong>March 23, 2012</strong>: Updated vLatest versions and dates; removed references to Kendo UI Mobile Beta since it's now released; updated Quick Comparison chart.
-    </li>
-    <li>
-     <strong>September 4th, 2013</strong>: Updated layout; updated information for new versions of libraries; added jQuery Mobile vs. Kendo UI Mobile section.
-   </ul>
+   <p>
+    <strong>January 30, 2012:</strong> Replaced social buttons with Twitter and G+; updated <a href="#datasource-item">DataSource section</a> to include (upcoming) Dataview component for jQuery UI; updated <a href="#mobile-device-compatibility-item">Mobile Device Compatibility section</a> to include information about touch interaction updates pending for jQuery UI.
+   </p>
+   <p>
+    <strong>March 23, 2012:</strong> Updated vLatest versions and dates; removed references to Kendo UI Mobile Beta since it's now released; updated Quick Comparison chart.
+   </p>
   </section>
-
+  <ul id="panelbar">
+   <li id="introduction-item">
+    Introduction
+    <div style="padding: 0px 15px 0px 15px;">
+     <p>Kendo UI and jQuery UI are JavaScript frameworks that provide many useful and robust building blocks of a modern web application. Both are built on top of <a href="http://jquery.com/">jQuery</a>, the most popular JavaScript library in use today.</p>
+     <div class="flurid">
+      <div class="row">
+       <div class="column width_1/2">
+        <h3>jQuery UI</h3>
+        <p>jQuery UI is part of the <a href="http://jquery.org/">jQuery Project</a> and is described as:</p>
+        <blockquote>[...] an open source library of interface components - interactions, full-featured widgets, and animation effects - based on the stellar jQuery javascript library. Each component is built according to jQuery's event-driven architecture (find something, manipulate it) and is themeable, making it easy for developers of any skill level to integrate and extend into their own code.</blockquote>
+        <p>jQuery UI is a popular JavaScript framework in the web developer community.</p>
+        <p><a target="_blank" href="http://jqueryui.com/demos/" class="k-button">Demos &amp; Documentation &#0187;</a></p>
+        <p>
+         Latest release: 1.8.18 (February 23, 2012) and 1.9, milestone 7 (March 28, 2012)<br />
+         License: <a href="http://jquery.org/license/">GPLv2 or MIT</a>
+        </p>
+       </div>
+       <div class="column width_1/2">
+        <h3>Kendo UI</h3>
+        <p>Kendo UI is a pure JavaScript framework with CSS defined for styling and behaviors. It is developed by Telerik and is comprised of the following three products:</p>
+        <dl>
+         <dt><a href="http://www.kendoui.com/web.aspx">Kendo UI Web</a></dt>
+         <dd>Contains the core functionality of Kendo UI framework, including the DataSource component, templates, drag-and-drop, and themeable widgets with integrated animations.</dd>
+         <dt><a href="http://www.kendoui.com/dataviz.aspx">Kendo UI DataViz</a></dt>
+         <dd>A collection of HTML5-powered, mobile-ready, data visualization widgets.</dd>
+         <dt><a href="http://www.kendoui.com/mobile.aspx">Kendo UI Mobile</a></dt>
+         <dd>Native UI widgets for building HTML5-powered apps and sites for modern mobile devices.</dd>
+        </dl>
+        <p><a target="_blank" href="http://demos.kendoui.com/" class="k-button">Demos &amp; Documentation &#0187;</a></p>
+        <p>
+         Latest release: 2012.1.322 (March 22, 2012)<br />
+         License: <a href="http://www.kendoui.com/faq/licensing.aspx">GPLv3 or commercial</a>
+        </p>
+      </div>
+     </div>
+    </div>
+   </li>
+   <li id="why-kendo-ui-item">
+    Why Kendo UI?
+    <div style="padding: 0px 15px 0px 15px;">
+     <p>Kendo UI is an end-to-end solution for modern client-side development. It's everything you need for building applications for modern web standards, saving developers time and minimizing frustration by providing an integrated - yet highly modular - framework.</p>
+     <p>Kendo UI framework is developed by Telerik – a leading provider of development and testing tools for web, desktop and mobile applications. We are trusted by over 100,000 customers worldwide for our innovation and industry-best technical support. It is our commitment to provided first class support and a rapid, regular release cycle.</p>
+     <p>When building Kendo UI, we wanted to ensure that the out-of-the-box features were highly-tuned to the tasks at hand and capable of maximum performance. We also wanted to minimize external dependencies so that Kendo UI can be quickly evolved based on feedback. To do that, Kendo UI provides many of its own implementations for core framework features.</p>
+     <p>You can use jQuery UI with Kendo UI without conflict. However, Kendo UI is not based on jQuery UI. Kendo UI has been built from the ground-up to deliver a rich, HTML5-based application framework that is tuned for performance and positioned to rapidly evolve over time.</p>
+     <p><a target="_blank" href="http://www.kendoui.com/faq/faq.aspx" class="k-button">Kendo UI FAQs &#0187;</a></p>
+     <p>Many more widgets, features, and overall improvements are scheduled for Kendo UI Web, Kendo UI DataViz, and Kendo UI Mobile. For more information about what's coming, please take some time to <a href="http://www.kendoui.com/roadmap.aspx">review our roadmap</a>!</p>
+    </div>
+   </li>
+   <li id="quick-comparison-item">
+    Quick Comparison
+    <div style="padding: 0px 15px 0px 15px;">
+     <p>The following table is based on data from <a href="http://jqueryui.com/">jqueryui.com</a> and <a href="http://kendoui.com/">kendoui.com</a>:</p>
+     <p>
+      <table id="quick-comparison-grid">
+       <thead>
+        <tr>
+         <th>Category</th>
+         <th>jQuery UI</th>
+         <th>Kendo UI</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>Widgets (Total)</td>
+         <td>Yes (8)</td>
+         <td>Yes (18 Web; 8 Mobile)</td>
+        </tr>
+        <tr>
+         <td>Themes (Total)</td>
+         <td>Yes (25)</td>
+         <td>Yes (5)</td>
+        </tr>
+        <tr>
+         <td>Effects (Total)</td>
+         <td>Yes (13)</td>
+         <td>Yes (5)</td>
+        </tr>
+        <tr>
+         <td>Interactions (Total)</td>
+         <td>Yes (5)</td>
+         <td>Yes (6)</td>
+        </tr>
+        <tr>
+         <td>Templates</td>
+         <td>No (see <a href="http://wiki.jqueryui.com/w/page/37898666/Template">Template</a>)</td>
+         <td>Yes</td>
+        </tr>
+        <tr>
+         <td>DataSource</td>
+         <td>No (see <a href="http://wiki.jqueryui.com/w/page/47179141/Dataview">Dataview</a>)</td>
+         <td>Yes</td>
+        </tr>
+        <tr>
+         <td><a href="http://en.wikipedia.org/wiki/Model_View_ViewModel">Model-View-ViewModel</a> (MVVM)</td>
+         <td>No</td>
+         <td>Yes</td>
+        </tr>
+        <tr>
+         <td>Data Visualization</td>
+         <td>No</td>
+         <td>Yes</td>
+        </tr>
+        <tr>
+         <td>Globalization</td>
+         <td>No (see <a href="http://wiki.jqueryui.com/w/page/39118647/Globalize">Globalize</a>)</td>
+         <td>Yes</td>
+        </tr>
+        <tr>
+         <td>Validation</td>
+         <td>No (see <a href="http://docs.jquery.com/Plugins/Validation">jQuery Validation Plugin</a>)</td>
+         <td>Yes</td>
+        </tr>
+        <tr>
+         <td>Browser Support</td>
+         <td>IE 6+, Firefox 3+, Safari 3.1+, Opera 9.6+, Chrome</td>
+         <td>IE 7+, Firefox 3+, Safari 4+, Opera 10+, Chrome</td>
+        </tr>
+        <tr>
+         <td>Mobile Device Compatibility</td>
+         <td>No (see <a href="http://jquerymobile.com/">jQuery Mobile</a>)</td>
+         <td>Yes</td>
+        </tr>
+       </tbody>
+      </table>
+     </p>
+    </div>
+   </li>
+   <li id="widgets-item">
+    Widgets
+    <div style="padding: 0px 15px 0px 15px;">
+     <p>jQuery UI and Kendo UI both provide widgets for constructing the front-end interface of your web applications. These widgets are designed to support progressive enhancement, allowing users in older browsers to access existing content and functionality of native HTML types if certain capabilities aren't accessible by the framework.</p>
+     <ul id="jquery-ui-widgets-panelbar">
+      <li>
+       jQuery UI Widgets (8)
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+     <ul id="kendo-ui-widgets-panelbar">
+      <li>
+       Kendo UI Widgets (18)
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+     <p>There are a few things worth mentioning here:</p>
+     <div style="padding-bottom: 15px;">
+      <ul>
+       <li>There are many additional widgets are available from the developer community.</li>
+       <li>The Autocomplete widget in jQuery UI combines the functionality of the AutoComplete and ComboBox widgets in Kendo UI Web.</li>
+       <li>The Datepicker widget in jQuery UI combines the functionality of the Calendar and DatePicker widgets in Kendo UI Web.</li>
+       <li>Menu, Spinner, and Tooltip Spinner widgets are under development and scheduled to ship with jQuery UI 1.9.</li>
+       <li>Editor and ListView widgets are scheduled to ship with the next version of Kendo UI in March 2012.</li>
+       <li>At the time of this writing, the jQuery UI team is working on a Grid. I recommend reviewing the <a href="http://wiki.jqueryui.com/w/page/34246941/Grid">jQuery UI Grid Project</a> for more information about this project and its status.</li>
+       <li>Finally, Kendo UI is regularly adding new widgets and improvements to existing ones. Check out the <a href="http://www.kendoui.com/web/roadmap.aspx">Kendo UI Web roadmap</a>, the <a href="http://www.kendoui.com/dataviz/roadmap.aspx">Kendo UI DataViz roadmap</a>, and the <a href="http://www.kendoui.com/mobile/roadmap.aspx">Kendo UI Mobile roadmap</a> for more information.</li>
+      </ul>
+     </div>
+    </div>
+   </li>
+   <li id="themes-item">
+    Themes
+    <div style="padding: 0px 15px 0px 15px;">
+     <p>Widgets in both jQuery UI and Kendo UI support themes and styling via <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>. Both frameworks also provide a number of themes out-of-the-box along with a means of creating custom themes.</p>
+     <ul id="jquery-ui-themes-panelbar">
+      <li>
+       jQuery UI Themes (25)
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+     <ul id="kendo-ui-themes-panelbar">
+      <li>
+       Kendo UI Themes (5)
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+     <p>Both jQuery UI and Kendo UI support the ability to customize themes. This can be done either manually or through a visual tool that's provided by both frameworks; the jQuery UI <a href="http://jqueryui.com/themeroller/">ThemeRoller</a> and the Kendo UI <a href="http://demos.kendoui.com/themebuilder/">ThemeBuilder</a>.</p>
+     <p>Both the jQuery UI ThemeRoller and the Kendo UI ThemeBuilder serve the same purpose; to allow the quick creation of custom themes for widgets. However, they differ slightly in their approach. While the jQuery UI ThemeRoller provides an integrated gallery of themes, the Kendo UI ThemeBuilder auto-generates and displays the CSS and <a href="http://lesscss.org/">LESS</a> representations of the custom themes that are generated.</p>
+    </div>
+   </li>
+  <li id="effects-item">
+   Effects
+   <div style="padding: 0px 15px 0px 15px;">
+    <p>jQuery UI supports a rich framework for integrated effects and animations that can be applied to any DOM element. These effects include the ability to animate colours and conduct easing functions. Kendo UI has fewer integrated effects and easing functions than jQuery UI. These are also only present to support the visual transitions that occurs on its widgets.</p>
+    <p>
+     <ul id="jquery-ui-effects-panelbar">
+      <li>
+       jQuery UI Effects (13)
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+     <ul id="kendo-ui-effects-panelbar">
+      <li>
+       Kendo UI Effects (5)
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+    </p>
+    <p></p>
+   </div>
+  </li>
+  <li id="interactions-item">
+   Interactions
+   <div style="padding: 0px 15px 0px 15px;">
+    <p>jQuery UI includes a number of interactions to that you can use to apply to DOM elements. Kendo UI defines interactions that are used as part of its widgets.</p>
+    <ul id="jquery-ui-interactions-panelbar">
+     <li>
+      jQuery UI Interactions (5)
+      <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+     </li>
+    </ul>
+    <ul id="kendo-ui-interactions-panelbar">
+     <li>
+      Kendo UI Interactions (6)
+      <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+     </li>
+    </ul>
+    <p>The interactions provided by both jQuery UI and Kendo UI are highly customizable.</p>
+    <p>It should be noted that interactions for jQuery UI are being rewritten for the 2.0 release.</p>
+   </div>
+  </li>
+  <li id="templates-item">
+   Templates
+   <div style="padding: 0px 15px 0px 15px;">
+    <p>Currently, jQuery UI is in the process of developing support for templates. In the meantime, the <a href="http://wiki.jqueryui.com/w/page/37898666/Template">Template</a> plug-in provides good support for templates.</p>
+    <p>Kendo UI supports a simple yet high performance templating engine.</p>
+    <p>In August 2011, Todd Anglin (<a href="http://twitter.com/toddanglin">@ToddAnglin</a>) did a great job providing an overview the templating engine of Kendo UI in his blog post, <a href="http://kendoui.com/blogs/archive/11-08-26/kendo_ui_templates_faster_than_a_speeding_resig.aspx">Kendo UI Templates: Faster than a Speeding Resig</a>:</p>
+    <blockquote>
+     <p>One of the key components included in Kendo UI is a very high-performance JavaScript "micro-templating" implementation. Almost every JavaScript front-end development project needs templating, so consistent with Kendo UI's goal of providing everything you need for JavaScript development in a seamless, compact package, we've included a templating solution out-of-the-box.</p>
+    </blockquote>
+    <p>A performance comparison of JavaScript template engines can be reviewed <a href="http://jsperf.com/dom-vs-innerhtml-based-templating/200">here</a>.</p>
+    <p><a target="_blank" href="http://demos.kendoui.com/web/templates/index.html" class="k-button">Kendo UI Template Demo</a></p>
+   </div>
+  </li>
+  <li id="datasource-item">
+   DataSource
+   <div style="padding: 0px 15px 0px 15px;">
+    <p>A significant difference between jQuery UI and Kendo UI is support for a DataSource component.</p>
+    <p>Currently, a DataSource-like component called Dataview is under development for jQuery UI. You can read more about its progress on <a href="http://wiki.jqueryui.com/w/page/47179141/Dataview">the wiki page for Dataview</a>.</p>
+    <p>The DataSource component is a powerful abstraction of data in Kendo UI and is fundamental to the way in which databinding is conducted with widgets. While the concept of databinding of local and remote data source is supported in jQuery UI, no such abstraction exists.</p>
+    <p>From the demo page for the DataSource component:</p>
+    <blockquote>
+     <p>The DataSource component is an abstraction for using local (arrays of JavaScript objects) or remote (XML, JSON, JSONP) data. It fully supports CRUD (create, read, update, delete) data operations and provides both local and server-side support for sorting, paging, filtering, grouping, and aggregates.</p>
+    </blockquote>
+    <p>The DataSource component is powerful abstraction of Kendo UI and provides developers with the ability to perform local and remote databinding quickly.</p>
+    <p><a target="_blank" href="http://demos.kendoui.com/web/datasource/index.html" class="k-button">Kendo UI DataSource Demo</a></p>
+   </div>
+  </li>
+  <li id="data-visualization-item">
+   Data Visualization
+   <div style="padding: 0px 15px 0px 15px;">
+    <p>jQuery UI does not provide a framework for data visualizations. However, many plugins exist.</p>
+    <p>Kendo UI provides a library of data visualizations through Kendo UI DataViz, an API that provides Pie, Line, Bar, Column, and Scatter charts to your applications and websites.</p>
+    <blockquote>Kendo UI DataViz automatically uses <a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> or <a href="http://en.wikipedia.org/wiki/Vml">VML</a> to render rich data visualizations, depending on the capabilities of the browser. This makes it possible to render Kendo UI DataViz charts in [many] environments, from older browsers, like IE7, to mobile browsers on platforms like iOS and Android (Opera and the Android browser v3 and up).</blockquote>
+    <p>Kendo UI DataViz is underpinned by the effects and interactions framework of Kendo UI to provide visual animations when rendering to the browser.</p>
+   </div>
+  </li>
+  <li id="globalization-item">
+   Globalization
+   <div style="padding: 0px 15px 0px 15px;">
+    <p>Both jQuery UI and Kendo UI provide excellent support for globalization. Both frameworks have localized widgets for date formats. However, Kendo UI includes support for currency and times as well. Support for culture-aware number and date parsing is available for jQuery UI through the <a href="https://github.com/jquery/globalize">Globalize</a>, a JavaScript library currently in development as part of the Grid project. From the <a href="http://wiki.jqueryui.com/w/page/39118647/Globalize">project wiki for Globalize</a>:
+    </p>
+    <blockquote>
+     <p>In the future, jQuery UI core will expose an API interface that can be met by Globalize. At that point the jQuery UI team will encourage widget authors to utilize this $. utility API to ensure any widget can be globalized in the same way, with or without globalize.js as a dependency.</p>
+    </blockquote>
+    <p><a target="_blank" href="http://jquery.github.com/globalize/examples/browser/" class="k-button">jQuery UI via Globalize Demo</a></p>
+    <p><a target="_blank" href="http://demos.kendoui.com/web/globalization/index.html" class="k-button">Kendo UI Globalization Demo</a></p>
+   </div>
+  </li>
+  <li id="validation-item">
+   Validation
+   <div style="padding: 0px 15px 0px 15px;">
+    <p>jQuery UI does not provide a framework for validation. However, a plugin exists.</p>
+    <p>Kendo UI includes validation out-of-the-box via the Validator component, which offers a mechanism of performing client-side form validation. Built around the HTML5 form validation attributes, it supports variety of built-in validation rules, but also provides a convenient way for setting custom rules handling.</p>
+    <p><a target="_blank" href="http://demos.kendoui.com/web/validator/index.html" class="k-button">Kendo UI Validator Demo</a></p>
+   </div>
+  </li>
+ <li id="browser-compatibility-item">
+  Browser Compatibility
+  <div style="padding: 0px 15px 0px 15px;">
+   <p>The widgets of both jQuery UI and Kendo UI feature excellent support for older browsers.</p>
+    <p>
+     <ul id="jquery-ui-browser-compatibility-panelbar">
+      <li>
+       jQuery UI Browser Compatibility
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+     <ul id="kendo-ui-browser-compatibility-panelbar">
+      <li>
+       Kendo UI Browser Compatibility
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+    </p>
+   <p>While jQuery UI does feature support for Internet Explorer 6, <a href="http://www.kendoui.com/blogs/archive/11-10-07/kendo_ui_beta_2_now_available.aspx">the Kendo UI team decided to drop support for Internet Explorer 6 after the Kendo UI Beta 2</a>. This decision was based on the feedback we had received from customers stating that support for Internet Explorer 6 wasn't necessary.</p>
+  </div>
+ </li>
+ <li id="mobile-device-compatibility-item">
+  Mobile Device Compatibility
+  <div style="padding: 0px 15px 0px 15px;">
+   <p>jQuery UI widgets do not provide support for touch and mobile devices. However, the jQuery team is currently working on touch support for all interactions - more information is available <a href="http://wiki.jqueryui.com/w/page/50166448/Interaction">here</a>. As an alternative, <a href="http://jquerymobile.com/">jQuery Mobile</a> provides an excellent framework of widgets for building mobile web applications. From the project's homepage:</p>
+   <blockquote>
+    <p>A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation. Its lightweight code is built with progressive enhancement, and has a flexible, easily themeable design.</p>
+   </blockquote>
+   <p>Kendo UI offers support for touch and mobile devices out-of-the-box. All widgets in Kendo UI provide full support for touchscreen devices, such as the iPad. The support for touch input is also extended to its support for drag-and-drop interactions with any DOM element.</p>
+   <p>Kendo UI Mobile features widgets for build HTML5-based applications for modern mobile devices, including Button, ButtonGroup, ListView, NavBar, Scroller, ScrollView, Switch, and TabStrip. Demos of these widgets in-action may be seen on the <a href="http://demos.kendoui.com/mobile/overview/index.html">Kendo UI Mobile demo page</a>.</p>
+  </div>
+  </li>
+  <li id="html5-support-item">
+   Web Standards Support
+   <div style="padding: 0px 15px 0px 15px;">
+    <p>jQuery UI and Kendo UI leverage and utilize modern web standards when supported by the browser. Note: This also includes incorporating aspects of HTML5 and CSS3. The following isn't exhaustive; rather, it provides a set of examples where both jQuery UI and Kendo UI either incorporate or leverage modern web standards.</p>
+    <p>
+     <ul id="jquery-ui-html5-support-panelbar">
+      <li>
+       jQuery UI Web Standards Support
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+     <ul id="kendo-ui-html5-support-panelbar">
+      <li>
+       Kendo UI Web Standards Support
+       <div style="padding-top: 15px; padding-bottom: 15px;"></div>
+      </li>
+     </ul>
+    </p>
+    <p>A significant difference between jQuery UI and Kendo UI is support for ARIA and accessibility. jQuery UI provides great support for ARIA and accessibility. Out of the box, Kendo UI does not. Your mark-up must be supplemented to support this.</p>
+   </div>
+  </li>
+  <li id="product-support-item">
+   Product Support
+   <div style="padding: 0px 15px 0px 15px;">
+    <p>Both jQuery UI and Kendo UI feature support through a number of different means. Many web developers can find support online in forums and sites like Stack Overflow.</p>
+    <p>Support for jQuery UI is described on its website as follows:</p>
+    <blockquote>
+     <p>The jQuery UI community is very active and provides a friendy, helpful environment when you need development advice or have ideas on how to improve a script. The jQuery UI Team encourages everyone to actively participate in the development of the library.</p>
+    </blockquote>
+    <p>Commercial support for jQuery UI is available through third-party sponsors of the jQuery and jQuery UI projects.</p> 
+    <p>For the commercial version of Kendo UI, Telerik offers a 48-hour guaranteed response time for tickets submitted to its support system. Additionally, Telerik is committed to providing all service packs and weekly builds for commercial customers.</p>
+   </div>
+  </li>
+  </ul>
   <section id="comments">
    <h2>Comments</h2>
    <div id="disqus_thread"></div>
@@ -595,9 +419,6 @@
    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </section>
-
-  </div><!-- End #content -->
-
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-28693517-1']);
@@ -608,29 +429,26 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
+  <script type="text/javascript">
+   $(document).ready(function() {
+    var panelBar = $("#panelbar").kendoPanelBar({}).data("kendoPanelBar");
+    panelBar.expand($('[id*="-item"]'));
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="http://cdn.kendostatic.com/2013.2.716/js/kendo.web.min.js"></script>
-
-  <script>
-   $("#why-kendo-ui-panelbar").kendoPanelBar();
-   $("#quick-comparison-grid").kendoGrid({scrollable:false});
-
-   $("#jquery-ui-widgets-panelbar").kendoPanelBar({contentUrls:["jquery-ui-widgets.html"]});
-   $("#kendo-ui-widgets-panelbar").kendoPanelBar({contentUrls:["kendo-ui-widgets.html"]});
-   $("#jquery-ui-themes-panelbar").kendoPanelBar({contentUrls:["jquery-ui-themes.html"]});
-   $("#kendo-ui-themes-panelbar").kendoPanelBar({contentUrls:["kendo-ui-themes.html"]});
-   $("#jquery-ui-effects-panelbar").kendoPanelBar({contentUrls:["jquery-ui-effects.html"]});
-   $("#kendo-ui-effects-panelbar").kendoPanelBar({contentUrls:["kendo-ui-effects.html"]});
-   $("#jquery-ui-interactions-panelbar").kendoPanelBar({contentUrls:["jquery-ui-interactions.html"]});
-   $("#kendo-ui-interactions-panelbar").kendoPanelBar({contentUrls:["kendo-ui-interactions.html"]});
-   $("#jquery-ui-browser-compatibility-panelbar").kendoPanelBar({contentUrls:["jquery-ui-browsers.html"]});
-   $("#kendo-ui-browser-compatibility-panelbar").kendoPanelBar({contentUrls:["kendo-ui-browsers.html"]});
-   $("#jquery-ui-html5-support-panelbar").kendoPanelBar({contentUrls:["jquery-ui-html5-support.html"]});
-   $("#kendo-ui-html5-support-panelbar").kendoPanelBar({contentUrls:["kendo-ui-html5-support.html"]});
-
-   $("#jquery-mobile-widgets-panelbar").kendoPanelBar({contentUrls:["jquery-mobile-widgets.html"]});
-   $("#kendo-mobile-widgets-panelbar").kendoPanelBar({contentUrls:["kendo-mobile-widgets.html"]});
+    $("#why-kendo-ui-panelbar").kendoPanelBar();
+    $("#quick-comparison-grid").kendoGrid({scrollable:false});
+    $("#jquery-ui-widgets-panelbar").kendoPanelBar({contentUrls:["jquery-ui-widgets.html"]});
+    $("#kendo-ui-widgets-panelbar").kendoPanelBar({contentUrls:["kendo-ui-widgets.html"]});
+    $("#jquery-ui-themes-panelbar").kendoPanelBar({contentUrls:["jquery-ui-themes.html"]});
+    $("#kendo-ui-themes-panelbar").kendoPanelBar({contentUrls:["kendo-ui-themes.html"]});
+    $("#jquery-ui-effects-panelbar").kendoPanelBar({contentUrls:["jquery-ui-effects.html"]});
+    $("#kendo-ui-effects-panelbar").kendoPanelBar({contentUrls:["kendo-ui-effects.html"]});
+    $("#jquery-ui-interactions-panelbar").kendoPanelBar({contentUrls:["jquery-ui-interactions.html"]});
+    $("#kendo-ui-interactions-panelbar").kendoPanelBar({contentUrls:["kendo-ui-interactions.html"]});
+    $("#jquery-ui-browser-compatibility-panelbar").kendoPanelBar({contentUrls:["jquery-ui-browsers.html"]});
+    $("#kendo-ui-browser-compatibility-panelbar").kendoPanelBar({contentUrls:["kendo-ui-browsers.html"]});
+    $("#jquery-ui-html5-support-panelbar").kendoPanelBar({contentUrls:["jquery-ui-html5-support.html"]});
+    $("#kendo-ui-html5-support-panelbar").kendoPanelBar({contentUrls:["kendo-ui-html5-support.html"]});
+   });
   </script>
  </body>
 </html>
