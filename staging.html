@@ -616,11 +616,11 @@
 		<p>Here's a visual sampling of the widgets that each framework provides.</p>
 		<div class="side-by-side">
 			<div>
-				<img src="img/jquery-mobile-widgets.png" alt="Visual sampling of widgets provided by jQuery Mobile">
+				<img src="img/jquery-mobile-widgets.png" alt="Visual sampling of widgets provided by jQuery Mobile" class="zoomable">
 				<p>Sample of jQuery Mobile widgets</p>
 			</div>
 			<div>
-				<img src="img/kendo-mobile-widgets.png" alt="Visual sampling of widgets provided by Kendo UI Mobile">
+				<img src="img/kendo-mobile-widgets.png" alt="Visual sampling of widgets provided by Kendo UI Mobile" class="zoomable">
 				<p>Sample of Kendo UI Mobile widgets</p>
 			</div>
 		</div>
@@ -649,7 +649,7 @@
 				<p>Example of the swatches applied to buttons</p>
 			</div>
 			<div>
-				<img src="img/jquery-mobile-themeroller.png" alt="Display of ThemeRoller">
+				<img src="img/jquery-mobile-themeroller.png" alt="Display of jQuery Mobile's ThemeRoller" class="zoomable">
 				<p>jQuery Mobile's ThemeRoller</p>
 			</div>
 		</div>
@@ -662,11 +662,11 @@
 		<p>Kendo UI Mobile features themes that replicate native mobile device OS experiences. These themes can be configured using <a href="http://demos.kendoui.com/mobilethemebuilder/index.html">Kendo UI Mobile's ThemeBuilder</a>. The <a href="http://www.kendoui.com/web/whats-new/q2-2013-mobile.aspx">2013 Q2 release of Kendo UI Mobile</a> included a new flat theme in line with iOS 7.</p>
 		<div class="side-by-side weigh-left">
 			<div>
-				<img src="img/kendo-mobile-themebuilder.png">
+				<img src="img/kendo-mobile-themebuilder.png" alt="Kendo UI Mobile's ThemeBuilder" class="zoomable">
 				<p>Kendo UI Mobile's ThemeBuilder</p>
 			</div>
 			<div>
-				<img src="img/kendo-mobile-flat.png">
+				<img src="img/kendo-mobile-flat.png" alt="Kendo UI Mobile's Flat Theme" class="zoomable">
 				<p>Example of Kendo UI Mobile's flat theme</p>
 			</div>
 		</div>
@@ -780,7 +780,34 @@
 
 <script>
 	kendo.init(document.body);
-</script>
 
+	var windowHeight = $(window).height(),
+		windowWidth = $(window).width();
+
+	$(window).on('resize', function() {
+		windowHeight = $(window).height();
+		windowWidth = $(window).width();
+	});
+
+	$('.zoomable').on('click', function() {
+		var newImage = $(this).clone();
+		newImage.css('maxWidth', windowWidth - 50);
+		newImage.css('maxHeight', windowHeight - 50);
+
+		$('<div>').html(newImage).appendTo('body').kendoWindow({
+			title: newImage.attr('alt'),
+			visible: false,
+			close: function() {
+				var self = this;
+				setTimeout(function() {
+					$(self.wrapper).remove();
+				}, 300);
+			}
+		}).data('kendoWindow').center().open();
+	});
+</script>
+<style>
+
+</style>
 </body>
 </html>

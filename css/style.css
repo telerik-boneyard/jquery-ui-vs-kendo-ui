@@ -82,6 +82,8 @@ header > div {
 	color: #F0713A;
 	font-style: italic;
 }
+.zoomable:hover { cursor: pointer; }
+
 #menu {
 	background: #F3F5F8;
 	border-right: 1px solid #E6E8EC;
@@ -137,6 +139,12 @@ a[href*="menu"] {
 .k-panelbar .k-content {
 	padding: 1em 0.5em;
 }
+.k-window-titlebar { height: 1.8em; }
+.k-window .k-link {
+	height: 20px;
+	width: 20px;
+}
+.k-window { padding-top: 1.5em; }
 
 @media (max-width: 1000px) {
 	.divider { display: block; padding: 0; }
