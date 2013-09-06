@@ -1,7 +1,8 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-html {
-	font-size: 62.5%;
-}
+/* http://stackoverflow.com/questions/11258877/fixed-element-disappears-in-chrome */
+html, body { height:100%; overflow: auto; }
+
+html { font-size: 62.5%; }
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 17px;
@@ -9,7 +10,6 @@ body {
 	color: #333333;
 	background-color: #ffffff;
 	margin: 0;
-	max-width: 1200px;
 }
 h1 {
 	font-size: 2em;
@@ -125,6 +125,7 @@ a[href*="menu"] {
 #content {
 	float: left;
 	margin-left: 305px;
+	max-width: 950px;
 	width: -webkit-calc(97% - 300px);
 	width: calc(97% - 300px);
 }
