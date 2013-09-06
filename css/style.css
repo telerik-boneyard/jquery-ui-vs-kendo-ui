@@ -95,6 +95,7 @@ header > div {
 	overflow: auto;
 	padding: 0.5em 1.5em 1.5em 1.5em;
 }
+#menu h2 { display: none; }
 #menu h3 {
 	font-size: 1em;
 	text-align: left;
@@ -151,12 +152,14 @@ a[href="#menu"] {
 }
 @media (max-width: 700px) {
 	a[href="#menu"] { display: block; }
-	#menu h1 { font-size: 3em; }
+	#menu h2 { display: block; }
 	#menu {
 		position: static;
 		width: 100%;
+		background: white;
+		border-top: 1px solid #333;
 	}
-	#nav_container nav a {
+	#menu nav a {
 		font-size: 1em;
 	}
 	#content {
