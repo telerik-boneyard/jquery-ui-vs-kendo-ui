@@ -1,45 +1,45 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 html {
- font-size: 62.5%;
+	font-size: 62.5%;
 }
 body {
- font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
- font-size: 17px;
- line-height: 1.428571429;
- color: #333333;
- background-color: #ffffff;
- margin: 0;
- max-width: 1200px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	line-height: 1.428571429;
+	color: #333333;
+	background-color: #ffffff;
+	margin: 0;
+	max-width: 1200px;
 }
 h1 {
- font-size: 2em;
- text-align: center;
+	font-size: 2em;
+	text-align: center;
 }
 li {
- margin: 0.5em 0;
+	margin: 0.5em 0;
 }
 hr {
- border-width: 0 0 1px 0;
- border-style: dashed;
- margin: 0 0.1em;
+	border-width: 0 0 1px 0;
+	border-style: dashed;
+	margin: 0 0.1em;
 }
 section {
- border-top: 1px solid #333;
+	border-top: 1px solid #333;
 }
 
 header {
- text-align: center;
- margin-top: 0.5em;
+	text-align: center;
+	margin-top: 0.5em;
 }
 header h2 {
- font-size: 3em;
- margin: 0;
+	font-size: 3em;
+	margin: 0;
 }
 header > div {
- display: inline-block;
- padding: 1em;
- border-radius: 5px;
- vertical-align: middle;
+	display: inline-block;
+	padding: 1em;
+	border-radius: 5px;
+	vertical-align: middle;
 }
 
 .jquery-ui-logo { background: #B24926; }
@@ -47,84 +47,90 @@ header > div {
 .kendo-logo { background: #EFEFEF; }
 
 .callout {
- background: #169016;
- color: white;
- font-size: 1.2em;
- padding: 0.3em 1em;
+	background: #169016;
+	color: white;
+	font-size: 1.2em;
+	padding: 0.3em 1em;
 }
 .callout:hover {
- background: #16AA16;
- color: white;
+	background: #16AA16;
+	color: white;
 }
 .side-by-side {
- overflow: hidden;
+	overflow: hidden;
 }
 .side-by-side > div {
- display: block;
- float: left;
- width: 49%;
+	display: block;
+	float: left;
+	width: 49%;
 }
 .side-by-side.weigh-left > div:first-child {
- width: 75%;
+	width: 75%;
 }
 .side-by-side.weigh-left > div:last-child {
- width: 24%;
+	width: 24%;
 }
 .side-by-side.weigh-right > div:first-child {
- width: 40%;
+	width: 40%;
 }
 .side-by-side.weigh-right > div:last-child {
- width: 59%;
+	width: 59%;
 }
 .side-by-side img { max-width: 100%; }
 .side-by-side p, p.caption {
- margin-top: 0;
- color: #F0713A;
- font-style: italic;
+	margin-top: 0;
+	color: #F0713A;
+	font-style: italic;
 }
-#nav_container {
- background: #F3F5F8;
- border-right: 1px solid #E6E8EC;
- position: fixed;
- top: 0;
- left: 0;
- width: 275px;
- height: 100%;
- overflow: auto;
- padding: 0.5em 1.5em 1.5em 1.5em;
+#menu {
+	background: #F3F5F8;
+	border-right: 1px solid #E6E8EC;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 275px;
+	height: 100%;
+	overflow: auto;
+	padding: 0.5em 1.5em 1.5em 1.5em;
 }
-#nav_container h3 {
- font-size: 1em;
- text-align: left;
- margin: 0.6em 0 0.3em 0;
+#menu h3 {
+	font-size: 1em;
+	text-align: left;
+	margin: 0.6em 0 0.3em 0;
 }
 nav ul {
- margin: 0.5em 0 0 0;
- padding: 0;
- list-style: none;
+	margin: 0.5em 0 0 0;
+	padding: 0;
+	list-style: none;
 }
 nav li {
- margin: 0;
+	margin: 0;
 }
-#nav_container nav a {
- margin: 0;
- width: 100%;
- text-align: left;
- font-size: 0.8em;
- border-radius: 0;
+a[href*="menu"] {
+	display: none;
+	font-size: 1.2em;
+	text-align: center;
+	margin: 1em auto;
 }
-#nav_container nav a:target {
- background: #f0713a;
+#menu nav a {
+	margin: 0;
+	width: 100%;
+	text-align: left;
+	font-size: 0.8em;
+	border-radius: 0;
+}
+#menu nav a:target {
+	background: #f0713a;
 }
 #content {
- float: left;
- margin-left: 305px;
- width: -webkit-calc(97% - 300px);
- width: calc(97% - 300px);
+	float: left;
+	margin-left: 305px;
+	width: -webkit-calc(97% - 300px);
+	width: calc(97% - 300px);
 }
 .social-buttons {
- margin-top: 1em;
- text-align: center;
+	margin-top: 1em;
+	text-align: center;
 }
 
 .k-panelbar .k-content {
@@ -132,20 +138,21 @@ nav li {
 }
 
 @media (max-width: 1000px) {
- .divider { display: block; padding: 0; }
+	.divider { display: block; padding: 0; }
 }
 @media (max-width: 700px) {
- #nav_container h1 { font-size: 3em; }
- #nav_container {
-  position: static;
-  width: 100%;
- }
- #nav_container nav a {
-  font-size: 1em;
- }
- #content {
-  float: none;
-  width: 90%;
-  margin: 0 auto;
- }
+	a[href*="menu"] { display: block; }
+	#menu h1 { font-size: 3em; }
+	#menu {
+		position: static;
+		width: 100%;
+	}
+	#nav_container nav a {
+		font-size: 1em;
+	}
+	#content {
+		float: none;
+		width: 90%;
+		margin: 0 auto;
+	}
 }
