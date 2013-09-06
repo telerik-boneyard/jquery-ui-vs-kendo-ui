@@ -108,7 +108,7 @@ nav ul {
 nav li {
 	margin: 0;
 }
-a[href*="menu"] {
+a[href="#menu"] {
 	display: none;
 	font-size: 1.2em;
 	text-align: center;
@@ -150,7 +150,7 @@ a[href*="menu"] {
 	.divider { display: block; padding: 0; }
 }
 @media (max-width: 700px) {
-	a[href*="menu"] { display: block; }
+	a[href="#menu"] { display: block; }
 	#menu h1 { font-size: 3em; }
 	#menu {
 		position: static;
