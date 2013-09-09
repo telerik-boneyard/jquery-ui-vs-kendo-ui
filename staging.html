@@ -295,11 +295,15 @@
 
 		<div class="side-by-side">
 			<div>
-				<img src="img/jquery-ui-themeroller.png" alt="Display of jQuery UI's ThemeRoller">
+				<a target="_blank" href="img/jquery-ui-themeroller.png">
+					<img src="img/jquery-ui-themeroller.png" alt="Display of jQuery UI's ThemeRoller">
+				</a>
 				<p>jQuery UI's ThemeRoller</p>
 			</div>
 			<div>
-				<img src="img/kendo-ui-themebuilder.png" alt="Display of Kendo UI's ThemeBuilder">
+				<a target="_blank" href="img/kendo-ui-themebuilder.png">
+					<img src="img/kendo-ui-themebuilder.png" alt="Display of Kendo UI's ThemeBuilder">
+				</a>
 				<p>Kendo UI's ThemeBuilder</p>
 			</div>
 		</div>
@@ -424,11 +428,15 @@
 		<p>Both jQuery UI and Kendo UI provide excellent support for globalization. Both frameworks have localized widgets for dates, currency, and time. With the exception of datepicker, jQuery UI's globalization options are dependent on the <a href="https://github.com/jquery/globalize">Globalize library</a>; Kendo UI's globalization is included in the framework.</p>
 		<div class="side-by-side">
 			<div>
-				<img src="img/jquery-globalization.png" alt="Display of jQuery UI's globalization" class="zoomable">
+				<a href="img/jquery-globalization.png" target="_blank">
+					<img src="img/jquery-globalization.png" alt="Display of jQuery UI's globalization">
+				</a>
 				<p>jQuery UI's globalization options</p>
 			</div>
 			<div>
-				<img src="img/kendo-globalization.png" alt="Display of Kendo UI's globalization" class="zoomable">
+				<a href="img/kendo-globalization.png" target="_blank">
+					<img src="img/kendo-globalization.png" alt="Display of Kendo UI's globalization">
+				</a>
 				<p>Kendo UI's globalization options</p>
 			</div>
 		</div>
@@ -446,7 +454,9 @@
 		<p>Kendo UI includes validation out-of-the-box via the Validator component, which offers a mechanism of performing client-side form validation. Built around the HTML5 form validation attributes, it supports variety of built-in validation rules, but also provides a convenient way for setting custom rules handling.</p>
 		<div class="side-by-side">
 			<div>
-				<img src="img/kendo-validator.png" alt="Visual display of Kendo UI's validator" class="zoomable">
+				<a href="img/kendo-validator.png" target="_blank">
+					<img src="img/kendo-validator.png" alt="Visual display of Kendo UI's validator">
+				</a>
 				<p>Kendo UI's Validator</p>
 			</div>
 		</div>
@@ -616,11 +626,15 @@
 		<p>Here's a visual sampling of the widgets that each framework provides.</p>
 		<div class="side-by-side">
 			<div>
-				<img src="img/jquery-mobile-widgets.png" alt="Visual sampling of widgets provided by jQuery Mobile" class="zoomable">
+				<a href="img/jquery-mobile-widgets.png" target="_blank">
+					<img src="img/jquery-mobile-widgets.png" alt="Visual sampling of widgets provided by jQuery Mobile">
+				</a>
 				<p>Sample of jQuery Mobile widgets</p>
 			</div>
 			<div>
-				<img src="img/kendo-mobile-widgets.png" alt="Visual sampling of widgets provided by Kendo UI Mobile" class="zoomable">
+				<a href="img/kendo-mobile-widgets.png" target="_blank">
+					<img src="img/kendo-mobile-widgets.png" alt="Visual sampling of widgets provided by Kendo UI Mobile">
+				</a>
 				<p>Sample of Kendo UI Mobile widgets</p>
 			</div>
 		</div>
@@ -645,11 +659,15 @@
 		<p>jQuery Mobile has a concept of swatches that you can create to style individual widgets and elements. A theme can have up to 26 swatches and they are customizable using <a href="http://jquerymobile.com/themeroller/">jQuery Mobile's ThemeRoller</a>.</p>
 		<div class="side-by-side weigh-right">
 			<div>
-				<img src="img/jquery-mobile-swatches.png" alt="Display of jQuery Mobile swatches" class="zoomable">
+				<a href="img/jquery-mobile-swatches.png" target="_blank">
+					<img src="img/jquery-mobile-swatches.png" alt="Display of jQuery Mobile swatches">
+				</a>
 				<p>Example of the swatches applied to buttons</p>
 			</div>
 			<div>
-				<img src="img/jquery-mobile-themeroller.png" alt="Display of jQuery Mobile's ThemeRoller" class="zoomable">
+				<a href="img/jquery-mobile-themeroller.png" target="_blank">
+					<img src="img/jquery-mobile-themeroller.png" alt="Display of jQuery Mobile's ThemeRoller">
+				</a>
 				<p>jQuery Mobile's ThemeRoller</p>
 			</div>
 		</div>
@@ -662,11 +680,15 @@
 		<p>Kendo UI Mobile features themes that replicate native mobile device OS experiences. These themes can be configured using <a href="http://demos.kendoui.com/mobilethemebuilder/index.html">Kendo UI Mobile's ThemeBuilder</a>. The <a href="http://www.kendoui.com/web/whats-new/q2-2013-mobile.aspx">2013 Q2 release of Kendo UI Mobile</a> included a new flat theme in line with iOS 7.</p>
 		<div class="side-by-side weigh-left">
 			<div>
-				<img src="img/kendo-mobile-themebuilder.png" alt="Kendo UI Mobile's ThemeBuilder" class="zoomable">
+				<a href="img/kendo-mobile-themebuilder.png" target="_blank">
+					<img src="img/kendo-mobile-themebuilder.png" alt="Kendo UI Mobile's ThemeBuilder">
+				</a>
 				<p>Kendo UI Mobile's ThemeBuilder</p>
 			</div>
 			<div>
-				<img src="img/kendo-mobile-flat.png" alt="Kendo UI Mobile's Flat Theme" class="zoomable">
+				<a href="img/kendo-mobile-flat.png" target="_blank">
+					<img src="img/kendo-mobile-flat.png" alt="Kendo UI Mobile's Flat Theme">
+				</a>
 				<p>Example of Kendo UI Mobile's flat theme</p>
 			</div>
 		</div>
@@ -787,31 +809,6 @@
 
 <script>
 	kendo.init(document.body);
-
-	var windowHeight = $(window).height(),
-		windowWidth = $(window).width();
-
-	$(window).on('resize', function() {
-		windowHeight = $(window).height();
-		windowWidth = $(window).width();
-	});
-
-	$('.zoomable').on('click', function() {
-		var newImage = $(this).clone();
-		newImage.css('maxWidth', windowWidth - 50);
-		newImage.css('maxHeight', windowHeight - 50);
-
-		$('<div>').html(newImage).appendTo('body').kendoWindow({
-			title: newImage.attr('alt'),
-			visible: false,
-			close: function() {
-				var self = this;
-				setTimeout(function() {
-					$(self.wrapper).remove();
-				}, 300);
-			}
-		}).data('kendoWindow').center().open();
-	});
 </script>
 
 </body>
