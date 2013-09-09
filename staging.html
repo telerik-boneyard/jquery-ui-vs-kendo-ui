@@ -811,6 +811,14 @@
 
 <script>
 	kendo.init(document.body);
+
+	// http://stackoverflow.com/questions/11258877/fixed-element-disappears-in-chrome
+	// These rules cannot be placed in CSS, because they jank up scrolling on mobile
+	if (/chrome/i.test(navigator.userAgent) && !/mobile/i.test(navigator.userAgent)) {
+		var style = document.createElement('style');
+		style.innerHTML = 'html, body { height: 100%; overflow: auto; }';
+		$('head')[0].appendChild(style);
+	}
 </script>
 
 </body>
