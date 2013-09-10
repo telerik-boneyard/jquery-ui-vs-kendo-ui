@@ -91,6 +91,8 @@ header > div {
 	height: 100%;
 	overflow: auto;
 	padding: 0.5em 1.5em 1.5em 1.5em;
+	/* http://stackoverflow.com/questions/11258877/fixed-element-disappears-in-chrome */
+	-webkit-transform: translateZ(0);
 }
 #menu h2 { display: none; }
 #menu h3 {
