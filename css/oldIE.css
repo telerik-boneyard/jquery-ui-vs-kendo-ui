@@ -1,0 +1,16 @@
+#menu {
+	position: static;
+	width: 100%;
+	background: white;
+	border-top: 1px solid #333;
+}
+a[href="#menu"] { display: block; }
+#menu h2 { display: block; }
+#content {
+	position: static;
+	width: 95%;
+	max-width: auto;
+	margin: 0 auto;
+	float: none;
+}
+.side-by-side img { max-height: 300px; }
