@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		manifest: {
 			generate: {
-				src: ['staging.html', 'img/*.png', 'css/*.css', 'css/Default/*', 'js/*.js']
+				src: ['index.html', 'img/*.png', 'css/*.css', 'css/Default/*', 'js/*.js']
 			}
 		},
 		smushit: {
