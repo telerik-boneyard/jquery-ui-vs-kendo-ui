@@ -5,38 +5,76 @@
 	<title>jQuery UI vs. Kendo UI - Widget Comparison</title>
 	
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.common.min.css">
-	<link rel="stylesheet" href="http://cdn.kendostatic.com/2013.2.716/styles/kendo.default.min.css">
+	<link rel="stylesheet" href="http://cdn.kendostatic.com/2014.1.416/styles/kendo.common.min.css">
+	<link rel="stylesheet" href="http://cdn.kendostatic.com/2014.1.416/styles/kendo.default.min.css">
 
 	<style>
-		#jquery, #kendo {
-			width: 49%;
-			border: 1px solid black;
+		html, body {
+			padding: 0;
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		
+		header {
+			position: fixed;
+			width: 100%;
+			z-index: 99999;
+		}
+
+		.header-cols {
+			width: 100%;
+			margin: auto;
+			max-width: 960px;
+		}
+		
+		header .jquery { background: #B24926; }
+		header .kendo-ui { background: #EFEFEF; }
+
+		header img {
+			padding: 10px;
+		}
+
+		.content {
+			max-width: 960px;
+			padding-top: 100px;
+			margin: auto;
+		}
+		
+		.col {
+			width: 50%;
 			float: left;
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-			margin: -1px 0 0 -1px;
+			height: 100%;
 		}
-		#jquery header, #kendo header {
-			padding: 1em;
-			height: 5em;
-		}
-		#jquery header { background: #B24926; }
-		#kendo header { background: #EFEFEF; }
 
 		.box {
 			padding: 0.5em;
-			height: 20em;
 			overflow: auto;
-			border: 1px solid black;
-			margin: -1px;
+			height: 100%;
+			margin: 10px;
 		}
+
 		.box > h3 {
 			margin: 0.5em 0 0.5em 0em;
 			text-decoration: underline;
 		}
 
+		.group {
+			height: 200px;
+		}
+
+		.group-tall {
+			height: 400px;
+		}
+
+		.group-huge {
+			height: 800px;
+		}
+
+		.group.group-odd {
+			border-bottom: solid 1px #EFEFEF;
+			background-color: #FBFBFB;
+		}
+	
 		.k-content p { padding-left: 1em; }
 		.ui-menu, .ui-menu .ui-menu-item { width: 200px; }
 		.ui-slider { margin: 1em; }
@@ -44,366 +82,542 @@
 		.k-upload-button { width: 8em; }
 		.k-splitter { height: 250px; }
 	</style>
+
 </head>
 <body>
 
-<h1>Widget Comparision</h1>
-<p>The following is a comparison of the widgets in the jQuery UI and Kendo UI libraries. All widgets are presented in their default theme with the minimum set of options to get them up and running.</p>
+<header>
+	<div class="header-cols">
+		<div class="jquery col">
+			<div class="logo">
+				<img src="http://jqueryui.com/jquery-wp-content/themes/jquery/images/logo-jquery-ui.png" alt="jQuery UI logo" style="padding-top: 24px">
+			</div>
+		</div>
+		<div class="kendo-ui col">
+			<div class="logo">
+				<img src="../img/kendo-logo.png" alt="Kendo UI">
+			</div>
+		</div>
+	</div>
+</header>
 
-<div id="jquery">
-	<header>
-		<img src="http://jqueryui.com/jquery-wp-content/themes/jquery/images/logo-jquery-ui.png" alt="jQuery UI logo" style="margin-top: 10px;">
-	</header>
+<section class="content">
 	
-	<div class="box">
-		<h3>Accordion</h3>
-		<div id="accordion">
-			<h3>One</h3>
-			<div>One - Contents</div>
-			<h3>Two</h3>
-			<div>Two - Contents</div>
-			<h3>Three</h3>
-			<div>Three - Contents</div>
+	<div>
+		<h1>Widget Comparision</h1>
+			<p>The following is a comparison of the widgets in the jQuery UI and Kendo UI libraries. All widgets are presented in their default theme with the minimum set of options to get them up and running.</p>
+	</div>
+
+	<div class="group group-odd group-tall">
+		<div class="col">
+			<div class="box">	
+				<h3>Accordion</h3>
+				<div id="accordion">
+					<h3>One</h3>
+					<div>One - Contents</div>
+					<h3>Two</h3>
+					<div>Two - Contents</div>
+					<h3>Three</h3>
+					<div>Three - Contents</div>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>PanelBar</h3>
+				<ul data-role="panelbar">
+					<li>
+						One
+						<div><p>One - Contents</p></div>
+					</li>
+					<li>
+						Two
+						<div><p>Two - Contents</p></div>
+					</li>
+					<li>
+						Three
+						<div><p>Three - Contents</p></div>
+					</li>
+				</ul>  	
+			</div>
 		</div>
 	</div>
 
-	<div class="box">
-		<h3>Autocomplete</h3>
-		<input id="autocomplete">
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<h3>Autocomplete</h3>
+					<input id="autocomplete">
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>AutoComplete</h3>
+						<input data-role="autocomplete" data-bind="source: countryData" data-text-field="value">
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-odd">
+			<div class="col">
+				<div class="box">
+					<h3>Datepicker</h3>
+					<input id="datepicker">
+				</div>
+			</div>	
+			<div class="col">
+				<div class="box">
+					<h3>Datepicker</h3>
+					<input data-role="datepicker">
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-tall">
+			<div class="col">
+				<div class="box">
+					<h3>Datepicker (inline)</h3>
+					<div id="inlineDatepicker"></div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Calendar</h3>
+					<div data-role="calendar"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-odd">
+			<div class="col">
+				<div class="box">
+					<h3>Dialog</h3>
+					<button id="dialogOpen">Open</button>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Window</h3>
+					<button data-role="button" data-bind="click: openWindow">Open</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<h3>Menu</h3>
+					<ul id="menu">
+						<li><a href="#">One</a></li>
+						<li>
+							<a href="#">Two</a>
+							<ul>
+								<li><a href="#">Alpha</a></li>
+								<li><a href="#">Beta</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Menu</h3>
+					<ul data-role="menu">
+						<li>One</li>
+						<li>
+							Two
+							<ul>
+								<li>Alpha</li>
+								<li>Beta</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-odd">
+			<div class="col">
+				<div class="box">
+					<h3>Slider</h3>
+					<div id="slider"></div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Slider</h3>
+					<input data-role="slider">
+				</div>
+			</div>
+		</div>
+		
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<h3>Spinner</h3>
+					<input id="spinner">
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>NumericTextBox</h3>
+					<input data-role="numerictextbox">
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-odd">
+			<div class="col">
+				<div class="box">
+					<h3>Tabs</h3>
+					<div id="tabs">
+						<ul>
+							<li><a href="#tabs-1">One</a></li>
+							<li><a href="#tabs-2">Two</a></li>
+							<li><a href="#tabs-3">Three</a></li>
+						</ul>
+						<div id="tabs-1">
+							One Contents
+						</div>
+						<div id="tabs-2">
+							Two Contents
+						</div>
+						<div id="tabs-3">
+							Three Contents
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col">
+				<div class="box">
+					<h3>TabStrip</h3>
+					<div data-role="tabstrip">
+						<ul>
+							<li class="k-state-active">One</li>
+							<li>Two</li>
+							<li>Three</li>
+						</ul>
+						<div>
+							<p>One Contents</p>
+						</div>
+						<div>
+							<p>Two Contents</p>
+						</div>
+						<div>
+							<p>Three Contents</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<h3>Tooltip</h3>
+					<input id="tooltip" title="tooltip">
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Tooltip</h3>
+					<input id="kendoTooltip" title="tooltip">
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-odd">
+			<div class="col">
+				<div class="box">
+					<h3>Button</h3>
+					<button id="button">Button</button>
+
+					<label for="checkbox">Checkbox</label>
+					<input type="checkbox" id="checkbox">
+
+					<div id="buttonset">
+						<label for="radio1">Radio 1</label>
+						<input type="radio" name="buttonset" id="radio1">
+						<label for="radio2">Radio 2</label>
+						<input type="radio" name="buttonset" id="radio2">
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Button</h3>
+					<p>
+						<button data-role="button">Button</button>
+						<button data-role="button" class="k-primary">Primary Button</button>
+						<button data-role="button" class="k-primary" disabled="disabled">Disabled Button</button>
+					</p>
+					<button data-role="button" data-sprite-css-class="k-icon k-i-refresh">Button w/Icon</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<h3>Progressbar</h3>
+					<div id="progressbar"></div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>ProgressBar</h3>
+					<input data-role="progressbar" data-value="false">	
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-odd group-tall">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>ColorPicker</h3>
+					<div data-role="colorpicker"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<p>A similar widget can be built on top of autocomplete. See <a href="http://jqueryui.com/autocomplete/#combobox">http://jqueryui.com/autocomplete/#combobox</a>.</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>ComboBox</h3>
+					<select data-role="combobox">
+						<option>One</option>
+						<option>Two</option>
+						<option>Three</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-odd">
+			<div class="col">
+				<div class="box">
+					<p>Coming in 1.11 (selectmenu)</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>DateTimePicker</h3>
+					<input data-role="datetimepicker">
+				</div>
+			</div>
+		</div>
+		
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>DropDownList</h3>
+					<select data-role="dropdownlist">
+						<option>One</option>
+						<option>Two</option>
+						<option>Three</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-odd group-tall">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Editor</h3>
+					<textarea data-role="editor"></textarea>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-tall">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Grid</h3>
+					<div id="kendoGrid"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="group group-odd group-tall">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>ListView</h3>
+					<div data-role="listview" data-pager="kendoPager" data-bind="source: countryData" data-selectable="true" data-template="listview-template"></div>
+					<div id="kendoPager" data-role="pager" data-bind="source: countryData" data-button-count="7"></div>
+					<script type="text/x-kendo-template" id="listview-template">
+						<div style='padding: 0.5em;'>${value}</div>
+					</script>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>MultiSelect</h3>
+					<select data-role="multiselect" data-bind="source: countryData" data-text-field="value"></select>
+				</div>
+			</div>
+		</div>
+
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Notification</h3>
+					<span id="notification"></span>
+					<button data-role="button" data-bind="click: openNotification">Open</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="group">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>MaskedTextBox</h3>
+					<input data-role="maskedtextbox" data-mask="(999) 999 - 9999">
+				</div>
+			</div>
+		</div>
+				
+		<div class="group group-odd group-huge">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Scheduler</h3>
+					<div id="kendoScheduler"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-tall">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>Splitter</h3>
+					<div data-role="splitter">
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group group-odd">
+			<div class="col">
+				<div class="box">
+					<p>N/A</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<h3>TimePicker</h3>
+					<input data-role="timepicker">
+				</div>
+			</div>
+		</div>
 	</div>
-	
-	<div class="box">
-		<h3>Datepicker</h3>
-		<input id="datepicker">
-	</div>
-	
-	<div class="box">
-		<h3>Datepicker (inline)</h3>
-		<div id="inlineDatepicker"></div>
-	</div>
-	
-	<div class="box">
-		<h3>Dialog</h3>
-		<button id="dialogOpen">Open</button>
-	</div>
-	
-	<div class="box">
-		<h3>Menu</h3>
-		<ul id="menu">
-			<li><a href="#">One</a></li>
-			<li>
-				<a href="#">Two</a>
-				<ul>
-					<li><a href="#">Alpha</a></li>
-					<li><a href="#">Beta</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-	
-	<div class="box">
-		<h3>Slider</h3>
-		<div id="slider"></div>
-	</div>
-	
-	<div class="box">
-		<h3>Spinner</h3>
-		<input id="spinner">
-	</div>
-	
-	<div class="box">
-		<h3>Tabs</h3>
-		<div id="tabs">
-			<ul>
-				<li><a href="#tabs-1">One</a></li>
-				<li><a href="#tabs-2">Two</a></li>
-				<li><a href="#tabs-3">Three</a></li>
+
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<h3>TreeView</h3>
+			<ul data-role="treeview" data-drag-and-drop="true">
+				<li>
+					Animals
+					<ul>
+						<li>Camel</li>
+						<li>Elephant</li>
+						<li>Giraffe</li>
+					</ul>
+				</li>
+				<li>
+					Flowers
+					<ul>
+						<li>Rose</li>
+						<li>Tulip</li>
+					</ul>
+				</li>
 			</ul>
-			<div id="tabs-1">
-				One Contents
-			</div>
-			<div id="tabs-2">
-				Two Contents
-			</div>
-			<div id="tabs-3">
-				Three Contents
-			</div>
 		</div>
 	</div>
 
-	<div class="box">
-		<h3>Tooltip</h3>
-		<input id="tooltip" title="tooltip">
-	</div>
-	
-	<div class="box">
-		<h3>Button</h3>
-		<button id="button">Button</button>
-
-		<label for="checkbox">Checkbox</label>
-		<input type="checkbox" id="checkbox">
-
-		<div id="buttonset">
-			<label for="radio1">Radio 1</label>
-			<input type="radio" name="buttonset" id="radio1">
-			<label for="radio2">Radio 2</label>
-			<input type="radio" name="buttonset" id="radio2">
-		</div>
-	</div>
-	
-	<div class="box">
-		<h3>Progressbar</h3>
-		<div id="progressbar"></div>
-	</div>
-	
-	<div class="box">
-		<p>N/A</p>
-	</div>
-	
-	<div class="box">
-		<p>A similar widget can be built on top of autocomplete. See <a href="http://jqueryui.com/autocomplete/#combobox">http://jqueryui.com/autocomplete/#combobox</a>.</p>
-	</div>
-	
-	<div class="box">
-		<p>N/A</p>
-	</div>
-	
-	<div class="box">
-		<p>Coming in 1.11 (selectmenu)</p>
-	</div>
-	
-	<div class="box">
-		<p>N/A</p>
-	</div>
-	
-	<div class="box">
-		<p>N/A</p>
-	</div>
-	
-	<div class="box">
-		<p>N/A</p>
-	</div>
-	
-	<div class="box">
-		<p>Although not quite the same, a similar widget can easily be built on top of autocomplete. See <a href="http://jqueryui.com/autocomplete/#multiple">http://jqueryui.com/autocomplete/#multiple</a>.</p>        
-	</div>
-
-	<div class="box">
-		<p>N/A</p>
-	</div>
-
-	<div class="box">
-		<p>N/A</p>
-	</div>
-	
-	<div class="box">
-		<p>N/A</p>
-	</div>
-	
-	<div class="box">
-		<p>N/A</p>
-	</div>
-	
-	<div class="box">
-		<p>N/A</p>
-	</div>
-</div>
-<div id="kendo">
-	<header>
-		<img src="http://www.kendoui.com/Image/kendo-logo.png" alt="Kendo UI logo">
-	</header>
-	
-	<div class="box">
-		<h3>PanelBar</h3>
-		<ul id="kendoPanelBar">
-			<li>
-				One
-				<div><p>One - Contents</p></div>
-			</li>
-			<li>
-				Two
-				<div><p>Two - Contents</p></div>
-			</li>
-			<li>
-				Three
-				<div><p>Three - Contents</p></div>
-			</li>
-		</ul>  
-	</div>
-	
-	<div class="box">
-		<h3>AutoComplete</h3>
-		<input id="kendoAutocomplete">
-	</div>
-	
-	<div class="box">
-		<h3>Datepicker</h3>
-		<input id="kendoDatePicker">
-	</div>
-	
-	<div class="box">
-		<h3>Calendar</h3>
-		<div id="kendoCalendar"></div>
-	</div>
-	
-	<div class="box">
-		<h3>Window</h3>
-		<button id="kendoWindowOpen">Open</button>
-	</div>
-	
-	<div class="box">
-		<h3>Menu</h3>
-		<ul id="kendoMenu">
-			<li>One</li>
-			<li>
-				Two
-				<ul>
-					<li>Alpha</li>
-					<li>Beta</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-	
-	<div class="box">
-		<h3>Slider</h3>
-		<input id="kendoSlider">
-	</div>
-	
-	<div class="box">
-		<h3>NumericTextBox</h3>
-		<input id="kendoNumericTextBox">
-	</div>
-	
-	<div class="box">
-		<h3>TabStrip</h3>
-		<div id="kendoTabStrip">
-			<ul>
-				<li class="k-state-active">One</li>
-				<li>Two</li>
-				<li>Three</li>
-			</ul>
-			<div>
-				<p>One Contents</p>
-			</div>
-			<div>
-				<p>Two Contents</p>
-			</div>
-			<div>
-				<p>Three Contents</p>
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
 			</div>
 		</div>
-	</div>
-	
-	<div class="box">
-		<h3>Tooltip</h3>
-		<input id="kendoTooltip" title="tooltip">
-	</div>
-	
-	<div class="box">
-		<p>Coming in Q3 2013 release (November)</p>
-	</div>
-	
-	<div class="box">
-		<p>Coming in Q3 2013 release (November)</p>
-	</div>
-	
-	<div class="box">
-		<h3>ColorPicker</h3>
-		<div id="kendoColorPicker"></div>
-	</div>
-	
-	<div class="box">
-		<h3>ComboBox</h3>
-		<select id="kendoComboBox">
-			<option>One</option>
-			<option>Two</option>
-			<option>Three</option>
-		</select>
-	</div>
-	
-	<div class="box">
-		<h3>DateTimePicker</h3>
-		<input id="kendoDateTimePicker">
-	</div>
-	
-	<div class="box">
-		<h3>DropDownList</h3>
-		<select id="kendoDropDownList">
-			<option>One</option>
-			<option>Two</option>
-			<option>Three</option>
-		</select>
-	</div>
-	
-	<div class="box">
-		<h3>Editor</h3>
-		<textarea id="kendoEditor"></textarea>
-	</div>
-	
-	<div class="box">
-		<h3>Grid</h3>
-		<div id="kendoGrid"></div>
-	</div>
-	
-	<div class="box">
-		<h3>ListView</h3>
-		<div id="kendoListView"></div>
-		<div id="kendoPager"></div>
-	</div>
-	
-	<div class="box">
-		<h3>MultiSelect</h3>
-		<select id="kendoMultiSelect"></select>
-	</div>
-	
-	<div class="box">
-		<h3>Scheduler</h3>
-		<div id="kendoScheduler"></div>
-	</div>
-	
-	<div class="box">
-		<h3>Splitter</h3>
-		<div id="kendoSplitter">
-			<div></div>
-			<div></div>
+		<div class="col">
+			<div class="box">
+				<h3>Upload</h3>
+				<input type="file" data-role="upload">
+			</div>	
 		</div>
 	</div>
-	
-	<div class="box">
-		<h3>TimePicker</h3>
-		<input id="kendoTimePicker">
-	</div>
-	
-	<div class="box">
-		<h3>TreeView</h3>
-		<ul id="kendoTreeView">
-			<li>
-				Animals
-				<ul>
-					<li>Camel</li>
-					<li>Elephant</li>
-					<li>Giraffe</li>
-				</ul>
-			</li>
-			<li>
-				Flowers
-				<ul>
-					<li>Rose</li>
-					<li>Tulip</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-	
-	<div class="box">
-		<h3>Upload</h3>
-		<input type="file" id="kendoUpload">
-	</div>
-</div>
+		
+</section>
+
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://cdn.kendostatic.com/2013.2.716/js/kendo.all.min.js"></script>
+<script src="http://cdn.kendostatic.com/2014.1.416/js/kendo.all.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script>
 	(function() {
@@ -421,37 +635,29 @@
 		var countries = [ "Albania", "Andorra", "Armenia", "Austria", "Azerbaijan", "Belarus", "Belgium", "Bosnia & Herzegovina", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Georgia", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Kosovo", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Malta", "Moldova", "Monaco", "Montenegro", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Russia", "San Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom", "Vatican City" ];
 
 		$( "#accordion" ).accordion({ active: false, collapsible: true });
-		$( "#kendoPanelBar" ).kendoPanelBar();
 
 		$( "#autocomplete" ).autocomplete({ source: countries });
-		$( "#kendoAutocomplete" ).kendoAutoComplete({ dataSource: countries });
 
 		$( "#datepicker" ).datepicker();
-		$( "#kendoDatePicker" ).kendoDatePicker();
 
 		$( "#inlineDatepicker" ).datepicker();
-		$( "#kendoCalendar" ).kendoCalendar();
 
 		$( "#dialogOpen" ).on( "click", function() {
 			$( "<div>Lorem Ipsum</div>" ).dialog();
 		});
-		$( "#kendoWindowOpen" ).on( "click", function() {
-			var div = $( "<div>Lorem Ipsum</div>" );
-			$( this ).after( div );
-			div.kendoWindow();
-		});
+		
+		var win = $('<div>Lorem Ipsum</div>').kendoWindow({
+			visible: false,
+			width: 300
+		}).data('kendoWindow');
 
 		$( "#menu" ).menu();
-		$( "#kendoMenu" ).kendoMenu();
 
 		$( "#slider" ).slider();
-		$( "#kendoSlider" ).kendoSlider();
 
 		$( "#spinner" ).spinner();
-		$( "#kendoNumericTextBox" ).kendoNumericTextBox();
 
 		$( "#tabs" ).tabs();
-		$( "#kendoTabStrip" ).kendoTabStrip();
 
 		$( "#tooltip" ).tooltip();
 		$( "#kendoTooltip" ).kendoTooltip();
@@ -460,16 +666,6 @@
 		$( "#buttonset" ).buttonset();
 
 		$( "#progressbar" ).progressbar({ value: false });
-
-		$( "#kendoColorPicker" ).kendoColorPicker();
-
-		$( "#kendoComboBox" ).kendoComboBox();
-
-		$( "#kendoDateTimePicker" ).kendoDateTimePicker();
-
-		$( "#kendoDropDownList" ).kendoDropDownList();
-
-		$( "#kendoEditor" ).kendoEditor();
 
 		$( "#kendoGrid" ).kendoGrid({
 			columns: [
@@ -490,32 +686,31 @@
 		countries.forEach( function( country ) {
 			countryObjects.push( { value: country } );
 		});
-		var countryData = new kendo.data.DataSource({
-			data: countryObjects,
-			pageSize: 5
+	
+		var popupNotification = $('#notification').kendoNotification().data('kendoNotification');
+
+		var model = kendo.observable({
+			countryData: new kendo.data.DataSource({
+				data: countryObjects,
+				pageSize: 5
+			}),
+			openWindow: function (e) {
+				win.center().open();
+				e.preventDefault();
+			},
+			openNotification: function (e) {
+				var d = new Date();
+				popupNotification.show(kendo.toString(d, 'HH:MM:ss.') + kendo.toString(d.getMilliseconds(), "000"), "error");
+			}
 		});
-		$( "#kendoListView" ).kendoListView({
-			dataSource: countryData,
-			selectable: true,
-			template: kendo.template( "<div style='padding: 0.5em;'>${value}</div>" )
-		});
-		$( "#kendoPager" ).kendoPager({ dataSource: countryData });
-		var multiSelectHtml = "";
-		countries.forEach(function( country ) {
-			multiSelectHtml += "<option>" + country + "</option>";
+
+		$( "#kendoScheduler" ).kendoScheduler({
+			startTime: new Date("2013/6/6 09:00"),
+  		endTime: new Date("2013/6/6 17:00")
 		});
 
-		$( "#kendoMultiSelect" ).html( multiSelectHtml ).kendoMultiSelect();
+		kendo.bind(document.body, model)
 
-		$( "#kendoScheduler" ).kendoScheduler();
-
-		$( "#kendoSplitter" ).kendoSplitter();
-
-		$( "#kendoTimePicker" ).kendoTimePicker();
-
-		$( "#kendoTreeView" ).kendoTreeView();
-
-		$( "#kendoUpload" ).kendoUpload();
 	}());
 </script>
 
