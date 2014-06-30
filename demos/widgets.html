@@ -4,7 +4,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>jQuery UI vs. Kendo UI - Widget Comparison</title>
 	
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="http://cdn.kendostatic.com/2014.1.416/styles/kendo.common.min.css">
 	<link rel="stylesheet" href="http://cdn.kendostatic.com/2014.1.416/styles/kendo.default.min.css">
 
@@ -76,7 +76,7 @@
 		}
 	
 		.k-content p { padding-left: 1em; }
-		.ui-menu, .ui-menu .ui-menu-item { width: 200px; }
+		.ui-menu { width: 200px; }
 		.ui-slider { margin: 1em; }
 		.ui-buttonset { margin-top: 0.5em; }
 		.k-upload-button { width: 8em; }
@@ -110,7 +110,7 @@
 
 	<div class="group group-odd group-tall">
 		<div class="col">
-			<div class="box">	
+			<div class="box">
 				<h3>Accordion</h3>
 				<div id="accordion">
 					<h3>One</h3>
@@ -143,430 +143,433 @@
 		</div>
 	</div>
 
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<h3>Autocomplete</h3>
-					<input id="autocomplete">
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>AutoComplete</h3>
-						<input data-role="autocomplete" data-bind="source: countryData" data-text-field="value">
-				</div>
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<h3>Autocomplete</h3>
+				<input id="autocomplete">
 			</div>
 		</div>
-		
-		<div class="group group-odd">
-			<div class="col">
-				<div class="box">
-					<h3>Datepicker</h3>
-					<input id="datepicker">
-				</div>
-			</div>	
-			<div class="col">
-				<div class="box">
-					<h3>Datepicker</h3>
-					<input data-role="datepicker">
-				</div>
+		<div class="col">
+			<div class="box">
+				<h3>AutoComplete</h3>
+					<input data-role="autocomplete" data-bind="source: countryData" data-text-field="value">
 			</div>
 		</div>
-		
-		<div class="group group-tall">
-			<div class="col">
-				<div class="box">
-					<h3>Datepicker (inline)</h3>
-					<div id="inlineDatepicker"></div>
-				</div>
+	</div>
+
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<h3>Datepicker</h3>
+				<input id="datepicker">
 			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Calendar</h3>
-					<div data-role="calendar"></div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="group group-odd">
-			<div class="col">
-				<div class="box">
-					<h3>Dialog</h3>
-					<button id="dialogOpen">Open</button>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Window</h3>
-					<button data-role="button" data-bind="click: openWindow">Open</button>
-				</div>
+		</div>	
+		<div class="col">
+			<div class="box">
+				<h3>Datepicker</h3>
+				<input data-role="datepicker">
 			</div>
 		</div>
+	</div>
 		
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<h3>Menu</h3>
-					<ul id="menu">
-						<li><a href="#">One</a></li>
-						<li>
-							<a href="#">Two</a>
-							<ul>
-								<li><a href="#">Alpha</a></li>
-								<li><a href="#">Beta</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Menu</h3>
-					<ul data-role="menu">
-						<li>One</li>
-						<li>
-							Two
-							<ul>
-								<li>Alpha</li>
-								<li>Beta</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+	<div class="group group-tall">
+		<div class="col">
+			<div class="box">
+				<h3>Datepicker (inline)</h3>
+				<div id="inlineDatepicker"></div>
 			</div>
 		</div>
-		
-		<div class="group group-odd">
-			<div class="col">
-				<div class="box">
-					<h3>Slider</h3>
-					<div id="slider"></div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Slider</h3>
-					<input data-role="slider">
-				</div>
+		<div class="col">
+			<div class="box">
+				<h3>Calendar</h3>
+				<div data-role="calendar"></div>
 			</div>
 		</div>
+	</div>
 		
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<h3>Spinner</h3>
-					<input id="spinner">
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>NumericTextBox</h3>
-					<input data-role="numerictextbox">
-				</div>
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<h3>Dialog</h3>
+				<button id="dialogOpen">Open</button>
 			</div>
 		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Window</h3>
+				<button data-role="button" data-bind="click: openWindow">Open</button>
+			</div>
+		</div>
+	</div>
 		
-		<div class="group group-odd">
-			<div class="col">
-				<div class="box">
-					<h3>Tabs</h3>
-					<div id="tabs">
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<h3>Menu</h3>
+				<ul id="menu">
+					<li>One</li>
+					<li>
+						Two
 						<ul>
-							<li><a href="#tabs-1">One</a></li>
-							<li><a href="#tabs-2">Two</a></li>
-							<li><a href="#tabs-3">Three</a></li>
+							<li>Alpha</li>
+							<li>Beta</li>
 						</ul>
-						<div id="tabs-1">
-							One Contents
-						</div>
-						<div id="tabs-2">
-							Two Contents
-						</div>
-						<div id="tabs-3">
-							Three Contents
-						</div>
-					</div>
-				</div>
-			</div>	
-			<div class="col">
-				<div class="box">
-					<h3>TabStrip</h3>
-					<div data-role="tabstrip">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Menu</h3>
+				<ul data-role="menu">
+					<li>One</li>
+					<li>
+						Two
 						<ul>
-							<li class="k-state-active">One</li>
-							<li>Two</li>
-							<li>Three</li>
+							<li>Alpha</li>
+							<li>Beta</li>
 						</ul>
-						<div>
-							<p>One Contents</p>
-						</div>
-						<div>
-							<p>Two Contents</p>
-						</div>
-						<div>
-							<p>Three Contents</p>
-						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<h3>Selectmenu</h3>
+				<select id="selectmenu">
+					<option>One</option>
+					<option>Two</option>
+					<option>Three</option>
+				</select>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>DropDownList</h3>
+				<select data-role="dropdownlist">
+					<option>One</option>
+					<option>Two</option>
+					<option>Three</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<h3>Slider</h3>
+				<div id="slider"></div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Slider</h3>
+				<input data-role="slider">
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<h3>Spinner</h3>
+				<input id="spinner">
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>NumericTextBox</h3>
+				<input data-role="numerictextbox">
+			</div>
+		</div>
+	</div>
+
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<h3>Tabs</h3>
+				<div id="tabs">
+					<ul>
+						<li><a href="#tabs-1">One</a></li>
+						<li><a href="#tabs-2">Two</a></li>
+						<li><a href="#tabs-3">Three</a></li>
+					</ul>
+					<div id="tabs-1">
+						One Contents
+					</div>
+					<div id="tabs-2">
+						Two Contents
+					</div>
+					<div id="tabs-3">
+						Three Contents
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<h3>Tooltip</h3>
-					<input id="tooltip" title="tooltip">
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Tooltip</h3>
-					<input id="kendoTooltip" title="tooltip">
-				</div>
-			</div>
-		</div>
-		
-		<div class="group group-odd">
-			<div class="col">
-				<div class="box">
-					<h3>Button</h3>
-					<button id="button">Button</button>
-
-					<label for="checkbox">Checkbox</label>
-					<input type="checkbox" id="checkbox">
-
-					<div id="buttonset">
-						<label for="radio1">Radio 1</label>
-						<input type="radio" name="buttonset" id="radio1">
-						<label for="radio2">Radio 2</label>
-						<input type="radio" name="buttonset" id="radio2">
+		<div class="col">
+			<div class="box">
+				<h3>TabStrip</h3>
+				<div data-role="tabstrip">
+					<ul>
+						<li class="k-state-active">One</li>
+						<li>Two</li>
+						<li>Three</li>
+					</ul>
+					<div>
+						<p>One Contents</p>
 					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Button</h3>
-					<p>
-						<button data-role="button">Button</button>
-						<button data-role="button" class="k-primary">Primary Button</button>
-						<button data-role="button" class="k-primary" disabled="disabled">Disabled Button</button>
-					</p>
-					<button data-role="button" data-sprite-css-class="k-icon k-i-refresh">Button w/Icon</button>
-				</div>
-			</div>
-		</div>
-		
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<h3>Progressbar</h3>
-					<div id="progressbar"></div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>ProgressBar</h3>
-					<input data-role="progressbar" data-value="false">	
-				</div>
-			</div>
-		</div>
-		
-		<div class="group group-odd group-tall">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>ColorPicker</h3>
-					<div data-role="colorpicker"></div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<p>A similar widget can be built on top of autocomplete. See <a href="http://jqueryui.com/autocomplete/#combobox">http://jqueryui.com/autocomplete/#combobox</a>.</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>ComboBox</h3>
-					<select data-role="combobox">
-						<option>One</option>
-						<option>Two</option>
-						<option>Three</option>
-					</select>
-				</div>
-			</div>
-		</div>
-		
-		<div class="group group-odd">
-			<div class="col">
-				<div class="box">
-					<p>Coming in 1.11 (selectmenu)</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>DateTimePicker</h3>
-					<input data-role="datetimepicker">
-				</div>
-			</div>
-		</div>
-		
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>DropDownList</h3>
-					<select data-role="dropdownlist">
-						<option>One</option>
-						<option>Two</option>
-						<option>Three</option>
-					</select>
-				</div>
-			</div>
-		</div>
-		
-		<div class="group group-odd group-tall">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Editor</h3>
-					<textarea data-role="editor"></textarea>
-				</div>
-			</div>
-		</div>
-		
-		<div class="group group-tall">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Grid</h3>
-					<div id="kendoGrid"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="group group-odd group-tall">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>ListView</h3>
-					<div data-role="listview" data-pager="kendoPager" data-bind="source: countryData" data-selectable="true" data-template="listview-template"></div>
-					<div id="kendoPager" data-role="pager" data-bind="source: countryData" data-button-count="7"></div>
-					<script type="text/x-kendo-template" id="listview-template">
-						<div style='padding: 0.5em;'>${value}</div>
-					</script>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>MultiSelect</h3>
-					<select data-role="multiselect" data-bind="source: countryData" data-text-field="value"></select>
-				</div>
-			</div>
-		</div>
-
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Notification</h3>
-					<span id="notification"></span>
-					<button data-role="button" data-bind="click: openNotification">Open</button>
-				</div>
-			</div>
-		</div>
-
-		<div class="group">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>MaskedTextBox</h3>
-					<input data-role="maskedtextbox" data-mask="(999) 999 - 9999">
-				</div>
-			</div>
-		</div>
-				
-		<div class="group group-odd group-huge">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Scheduler</h3>
-					<div id="kendoScheduler"></div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="group group-tall">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="box">
-					<h3>Splitter</h3>
-					<div data-role="splitter">
-						<div></div>
-						<div></div>
+					<div>
+						<p>Two Contents</p>
+					</div>
+					<div>
+						<p>Three Contents</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-		<div class="group group-odd">
-			<div class="col">
-				<div class="box">
-					<p>N/A</p>
+	</div>
+
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<h3>Tooltip</h3>
+				<input id="tooltip" title="tooltip">
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Tooltip</h3>
+				<input id="kendoTooltip" title="tooltip">
+			</div>
+		</div>
+	</div>
+
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<h3>Button</h3>
+				<button id="button">Button</button>
+
+				<label for="checkbox">Checkbox</label>
+				<input type="checkbox" id="checkbox">
+
+				<div id="buttonset">
+					<label for="radio1">Radio 1</label>
+					<input type="radio" name="buttonset" id="radio1">
+					<label for="radio2">Radio 2</label>
+					<input type="radio" name="buttonset" id="radio2">
 				</div>
 			</div>
-			<div class="col">
-				<div class="box">
-					<h3>TimePicker</h3>
-					<input data-role="timepicker">
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Button</h3>
+				<p>
+					<button data-role="button">Button</button>
+					<button data-role="button" class="k-primary">Primary Button</button>
+					<button data-role="button" class="k-primary" disabled="disabled">Disabled Button</button>
+				</p>
+				<button data-role="button" data-sprite-css-class="k-icon k-i-refresh">Button w/Icon</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<h3>Progressbar</h3>
+				<div id="progressbar"></div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>ProgressBar</h3>
+				<input data-role="progressbar" data-value="false">
+			</div>
+		</div>
+	</div>
+
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>ColorPicker</h3>
+				<div data-role="colorpicker"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<p>A similar widget can be built on top of autocomplete. See <a href="http://jqueryui.com/autocomplete/#combobox">http://jqueryui.com/autocomplete/#combobox</a>.</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>ComboBox</h3>
+				<select data-role="combobox">
+					<option>One</option>
+					<option>Two</option>
+					<option>Three</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>DateTimePicker</h3>
+				<input data-role="datetimepicker">
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-odd group-tall">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Editor</h3>
+				<textarea data-role="editor"></textarea>
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-tall">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Grid</h3>
+				<div id="kendoGrid"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-odd group-tall">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>ListView</h3>
+				<div data-role="listview" data-pager="kendoPager" data-bind="source: countryData" data-selectable="true" data-template="listview-template"></div>
+				<div id="kendoPager" data-role="pager" data-bind="source: countryData" data-button-count="7"></div>
+				<script type="text/x-kendo-template" id="listview-template">
+					<div style='padding: 0.5em;'>${value}</div>
+				</script>
+			</div>
+		</div>
+	</div>
+
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>MultiSelect</h3>
+				<select data-role="multiselect" data-bind="source: countryData" data-text-field="value"></select>
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Notification</h3>
+				<span id="notification"></span>
+				<button data-role="button" data-bind="click: openNotification">Open</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="group">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>MaskedTextBox</h3>
+				<input data-role="maskedtextbox" data-mask="(999) 999 - 9999">
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-odd group-huge">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Scheduler</h3>
+				<div id="kendoScheduler"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-tall">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>Splitter</h3>
+				<div data-role="splitter">
+					<div></div>
+					<div></div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="group group-odd">
+		<div class="col">
+			<div class="box">
+				<p>N/A</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="box">
+				<h3>TimePicker</h3>
+				<input data-role="timepicker">
 			</div>
 		</div>
 	</div>
@@ -609,16 +612,16 @@
 			<div class="box">
 				<h3>Upload</h3>
 				<input type="file" data-role="upload">
-			</div>	
+			</div>
 		</div>
 	</div>
-		
+
 </section>
 
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://cdn.kendostatic.com/2014.1.416/js/kendo.all.min.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 <script>
 	(function() {
 		if (!Array.prototype.forEach) {
@@ -652,6 +655,8 @@
 		}).data('kendoWindow');
 
 		$( "#menu" ).menu();
+
+		$( "#selectmenu" ).selectmenu({ width: 200 });
 
 		$( "#slider" ).slider();
 
